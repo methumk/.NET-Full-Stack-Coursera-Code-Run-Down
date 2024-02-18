@@ -1,0 +1,457 @@
+/* CSS Design */
+/* CSS colors */
+#cn-eg {
+    color: red;
+}
+
+#cRGB-eg {
+    color: rgb(81, 115, 122);
+}
+#cHSL-eg {
+    color: hsl(0, 65%, 55%);
+}
+#cRGBA-eg {
+    color: rgba(120, 250, 13, 5);
+}
+#cHSLA-eg {
+    color: hsla(120, 67%, 53%, 50%);
+}
+
+
+/* Background color */
+#bg-eg{
+    background-color: rgb(181, 223, 44);
+    border-color: black;
+    border-style: solid;
+    border-width: 0.2em;
+}
+
+
+/* CSS box model */
+/* css box image */
+#bm-img {
+    width: 40vw;
+}
+
+#elem-1 {
+    background-color: rgb(37, 197, 197);
+    border-color: black;
+    border-style: solid;
+    border-width: 0.2em;
+
+    padding-left: 10em;
+}
+
+#elem-2 {
+    background-color: rgb(138, 197, 37);
+    border: 0.2em dotted black;
+
+    padding-top:2em;
+    padding-right: 10em;
+}
+
+#elem-3 {
+    background-color: rgb(198, 124, 211);
+    border: 0.2em solid black;
+
+    padding: 10px 50px 100px 15px;
+
+    margin-top: 1.1em;
+}
+
+
+/* Box Sizing */
+.bs-parent {
+    width: 450px;
+    border: 1px solid black;
+}
+
+#bs-1 {
+    background-color: rgb(197, 37, 138);
+    border: 1px solid black;
+    width: 100%;
+    padding: 50px;
+    margin: 20px;
+}
+
+#bs-2 {
+    background-color: rgb(197, 37, 138);
+    border: 1px solid black;
+    padding: 50px;
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+
+/* Style Table */
+/* increase size of table */
+table {
+    width: 500px;
+}
+
+/* show all border */
+.nc{
+    border: 1px solid black;
+}
+
+/* collapse borders */
+.tb-bc{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/* color the head */
+#th {
+    background-color: black;
+    color: white;
+}
+
+/* To color every other row using pseudo class selector */
+.tb-tr:nth-child(2n+1) {
+    background-color: rgb(191, 189, 189);
+}
+
+/* For responsive ness - using pseudo class selector*/
+.tb-bc-2 {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+.tb-bc-2:hover {
+    background-color: cornsilk;
+}
+
+
+/* Icons */
+i {
+    font-size: 50px !important; /* Important makes this property take precendence over current class size */
+    color: blue;
+}
+
+
+/* Display Grid */
+.grid-container {
+    background-color:rgb(61, 225, 225);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);    /* You are specifying how many columns you want and their size; 1fr will take the whole row, so specifying multiple will make sure all cols together take the whole row. */
+    grid-auto-rows: minmax (80px, auto); /* makes default size 80 px */
+    grid-template-rows: 200px 200px;    /* This specifies it only for the first and second row */
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.grid-item {
+    background-color: whitesmoke;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* part 2 */
+/* First method to specify grid sizing */
+.grid-container1 {
+    background-color:rgb(183, 209, 51);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);    /* You are specifying how many columns you want and their size; 1fr will take the whole row, so specifying multiple will make sure all cols together take the whole row. */
+    grid-auto-rows: minmax(80px, auto); /* makes default size 80 px */
+    row-gap: 5px;
+    column-gap: 5px;
+    grid-template-areas: 
+    "header header header"    /* header takes up 3 columns*/
+    "sidebar content content"
+    "sidebar content content"
+}
+
+.grid-item1 {
+    background-color: rgb(234, 117, 117);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.item-1 {
+    grid-area: header;
+}
+
+.item-2 {
+    grid-area: sidebar;
+}
+.item-3 {
+    grid-area: content;
+}
+
+/* second method */
+.grid-container2 {
+    background-color:rgb(51, 122, 209);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);    /* You are specifying how many columns you want and their size; 1fr will take the whole row, so specifying multiple will make sure all cols together take the whole row. */
+    grid-auto-rows: minmax(80px, auto); /* makes default size 80 px */
+    row-gap: 5px;
+    column-gap: 5px;
+}
+
+.grid-item2 {
+    background-color: rgb(155, 16, 255);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.item-1-2 {
+    grid-column-start: 1;   /*These are counting the spaces in the column*/
+    /*grid-column-end: 3;     /*This ends before the third column*/
+    grid-column-end:-1;     /* this will make it span the entire row also: 4 in this case will work */
+     /* grid-column: 1 / -1;  Another method of specfiying the start and end columns (same for row)*/
+}
+
+.item-2-2 {
+    grid-column: span 2;    /* Instead of specifying start and end you can just specify how many columns it should take up */
+    grid-row: 1 / 3;
+}
+
+.item-3-2 {
+    /* grid-column: span 1; As this is a grid you don't need to specify this */
+    grid-row: 1 / 3;
+}
+
+/* Justifying and aligning content */
+.grid-container3 {
+    background-color:rgb(236, 14, 107);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);    /* You are specifying how many columns you want and their size; 1fr will take the whole row, so specifying multiple will make sure all cols together take the whole row. */
+    grid-auto-rows: 100px;
+    row-gap: 5px;
+    column-gap: 5px;
+    height: 100vh;
+    /* justify-content: center; centers all items horizontally */
+    /* justify-content: space-around; creates space around */
+    justify-content: end; /* creates space around - same properties can be added for align-content*/
+    align-content: center;  /* centers all items vertically */
+}
+
+.grid-item3 {
+    background-color: rgb(16, 255, 207);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+/* Nav Bar */
+.nav-bar-eg {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.nav-bar-li-eg {
+    float: left; /* Causes elements to appear side by side to the left (left to right), right will make it (right to left in order)*/
+}
+
+.nav-bar-li-eg a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* For the link that is active */
+.nav-active {
+    background-color:aqua;
+    color: black !important;
+}
+
+/* pseudo-class selector */
+.nav-bar-li-eg a:hover {
+    background-color: aquamarine;
+    color: gray !important;
+}
+
+/* Add space to first element so nav doesn't hide it */
+.nav-space {
+    margin-top: 70px;
+}
+
+#nav-bar-tut {
+    scroll-margin-top: 50px;
+}
+
+
+/* Dropdown */
+.dd-eg {
+    position: relative;
+    display: inline-block;
+}
+
+.dd-cnt {
+    display: none; /* Default don't display */
+    position: absolute;
+    z-index: 1; /*which element gets put to the top higher number more on top*/
+    left: 25px; /* add space to the left to line it up with drop down;*/
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    width: 100px;
+}
+
+.dd-eg:hover .dd-cnt{
+    display: block;
+}
+
+/* Pushed content down to make room for the dropdown selection options */
+.dd-eg:hover {
+    margin-bottom: 70px;
+}
+
+.dd-btn {
+    border: none;
+    padding: 20px;
+    border-radius:50px;
+}
+
+
+/* image gallery and sprites */
+.img-gall {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-row: auto;
+    gap: 10px;
+}
+
+.gal-imgs {
+    max-width: 100%; /* Make sure the image doesn't exceed the container */
+}
+
+
+/* sprites */
+.sp-eg1 {
+    width: 300px;
+    height: 300px;
+    background: url(./content/spritesheet.png) no-repeat;
+    background-position: -800px -300px; /* Specify where in the you want to start (left, top)*/
+    display: inline-block;
+}
+.sp-eg2 {
+    width: 300px;
+    height: 300px;
+    background: url(./content/spritesheet.png) no-repeat;
+    background-position: -1600px -200px; /* Negative positon*/
+    display: inline-block;
+}
+.sp-eg3 {
+    width: 300px;
+    height: 300px;
+    background: url(./content/spritesheet.png) no-repeat;
+    background-position: -5550px -380px;
+    display: inline-block;
+}
+
+
+/* Image Styling */
+#b7 {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;         /* Marking margin left/right auto AND display block move the image to the middle*/
+    border: 2px solid black;
+    border-radius: 50%;
+    box-shadow: 5px 4px 1px 3px rgba(0, 0, 0, 0.2); /* horizontal offset, vert offset, blur (more blurrier), spread radius (increases shadows radius), color */
+    filter: blur(4px) brightness(150%) contrast(180%);
+}
+
+#b7-ref{
+    -webkit-box-reflect: right;
+}
+
+
+/* Forms */
+input[type=text] , select {
+    width: 100px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: green;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: gray;
+}
+
+.form-div {
+    border-radius: 5px;
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+
+/* Text Effects */
+.te-eg {
+    background-color: aquamarine;
+    padding: 20px;
+    text-align: right;  /* justify will make the alignement for the left and right the same.*/
+    text-decoration: overline;  /* underline, strikethrough are some others*/
+    text-transform: uppercase; /*capitalize- makes first letter of all words capp, lowercase, uppercase (all upper), etc*/
+    word-spacing: 10px; /*spacing between words, can be negative as well */
+    letter-spacing: 5px; /* spacing between letters*/
+    line-height: 25px;  /* spaces between two text lines */
+    text-shadow: 20px 2px 3px rgb(51, 122, 209); /* Horizontal offset, vertical offset, blur radius, color */
+}
+
+
+/* Object FIt and Position */
+.cont-ofp {
+    background-color: gray;
+}
+#ofp1{
+    width: 200px;
+    height: 200px;
+    object-fit: fill; /* default value - fills the container to the given dimensions*/
+}
+#ofp2{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;    /* fixes aspect ratio */
+}
+#ofp3{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+#ofp4{
+    width: 200px;
+    height: 200px;
+    object-fit: scale-down;
+}
+
+#ofp5{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    object-position: 50% 50%;
+}

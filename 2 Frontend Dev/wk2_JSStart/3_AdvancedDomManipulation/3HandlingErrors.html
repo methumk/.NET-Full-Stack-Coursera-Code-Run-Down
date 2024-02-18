@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. Handling Errors & Exceptions</title>
+    <!-- JQUERY below -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<style>
+    #res-head{
+        display:inline;
+        font-size: larger;
+    }
+    #result{
+        display:inline;
+    }
+</style>
+<body>
+    <h1>Crazy Division</h1>
+    <div>
+        <label for="numerator">Numerator</label>
+        <input id='numerator' type="number">
+    </div>
+    <div>
+        <label for="denominator">Denominator</label>
+        <input id='denominator' type="number">
+    </div>
+    <div>
+        <p id="res-head">Result:</p>
+        <p id="result">🤓🤓🤓</p>
+    </div>
+</body>
+<script>
+    function divide(numerator, denominator)
+    {   
+        if (numerator === NaN || denominator === NaN)
+        {
+            throw new Error('Error: Dividing NaN(s)')
+        }
+        if (denominator === 0)
+        {
+            throw new Error('Error: Div by 0')
+        }
+        return numerator/denominator
+    }
+
+    const res = document.getElementById('result')
+    // JQUERY
+    // Event listerens for input tags for keyup(up/down keyarrows), mouseup(up/down button pressed)
+    $(":input").bind('keyup mouseup', () => {
+        // Gets the numerator value using jqueyr
+        let num = parseInt($('#numerator').val())
+        console.log("num changed to: ", num, " type: ", typeof(num))
+
+        let den = parseInt($('#denominator').val())
+        console.log("Den changed to: ", den, " type: ", typeof(den))
+
+        try{
+            const result = divide(num, den)
+            res.innerHTML = result
+        }catch(error)
+        {
+            res.innerHTML = error.message
+        }
+    })
+    
+    
+</script>
+</html>

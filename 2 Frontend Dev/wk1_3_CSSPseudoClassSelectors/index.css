@@ -1,0 +1,299 @@
+/* hover pseudo-class selector */
+button:hover {
+    background-color: red;
+    border-color: rgb(255, 1, 1);
+    color: white
+}
+
+/* active pc selector */
+#monkey-button:active {
+    background-color: rgb(106, 106, 225);
+}
+
+/* visited pc selector */
+#vis-eg:visited {
+    color: greenyellow;
+    background-color: antiquewhite;
+}
+
+/* focus pc selector */
+#focus-eg:focus {
+    color:cornflowerblue;
+    background-color: black;
+}
+
+/* nth-child pc selector */
+/* Select one element - notice index is ones-based */
+.nchild-eg:nth-child(5) {
+    background-color: black;
+    color:aqua;
+}
+
+/* select multiple using n variable */
+.nchild-eg2:nth-child(2n+1) {
+    background-color: black;
+    color:rgb(255, 0, 195);
+}
+
+/* first-child pc selector */
+.fchild-eg:first-child {
+    background-color: black;
+    color:rgb(0, 255, 17);
+}
+
+/* last-child pc selector */
+.lchild-eg:last-child {
+    background-color: black;
+    color:rgb(123, 255, 0);
+}
+
+/* pseudo-elements */
+/* before selector */
+#pe-eg-bf::before {
+    content: '✔';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    color:rgb(0, 136, 255);
+    border: none;
+    border-radius: 50px;
+}
+
+/* after selector */
+#pe-eg-af::after {
+    content: '✔';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    color:rgb(0, 136, 255);
+    border: none;
+    border-radius: 50px;
+}
+
+/* first line */
+#fle-eg::first-line
+{
+    color:rgb(0, 136, 255);
+    background-color: gold;
+}
+
+/* first letter */
+#flr-eg::first-letter
+{
+    color:rgb(0, 136, 255);
+    background-color: gold;
+}
+
+/* Attribute selector */
+.as-eg[href^="http"] {
+    background-color: cadetblue;
+}
+
+/* Based on value of the attribute */
+.asv-eg[type="text"] {
+    color: chartreuse;
+    background-color: blueviolet;
+}
+
+/* Font propertys */
+/* font size */
+#fp-small {
+    font-size: small
+}
+#fp-medium {
+    font-size: medium
+}
+#fp-large {
+    font-size: large
+}
+#fp-larger {
+    font-size: larger
+}
+#fp-10px {
+    font-size: 10px
+}
+#fp-10em {
+    font-size: 10em
+}
+
+/* Font style */
+#fp-italic {
+    font-style: italic;
+}
+
+/* Font weight */
+#fp-bold {
+    font-weight: bold;
+}
+#fp-bolder {
+    font-weight: bolder;
+}
+#fp-400 {
+    font-weight: 400;
+}
+
+/* Text transform */
+#fp-capitalized {
+    text-transform: capitalize;
+}
+
+/* Font family */
+#fp-family {
+    font-family: monospace;
+}
+
+/* CSS Positions */
+/* Static position */
+#p1 {
+    background-color:rgb(0, 136, 255);
+    height:5em;
+    left:50px; /* Does nothing because it's static*/
+}
+
+/* Relative position */
+#r1 {
+    background-color:rgb(88, 231, 122);
+    height:5em;
+    
+}
+#r2 {
+    background-color:rgb(99, 70, 195);
+    height:5em;
+    position: relative;
+    left: 100px;
+    bottom: 50px;
+}
+#r3 {
+    background-color:rgb(99, 70, 195);
+    height:5em;
+    position: relative;
+    bottom:80px;
+    opacity: 70%;
+}
+
+/* Absolute position */
+.a1 {
+    background-color:rgb(88, 231, 122);
+    height:5em;
+}
+#a2 {
+    background-color:rgb(99, 70, 195);
+    height:5em;
+    position: absolute
+}
+#a3 {
+    background-color:rgb(228, 88, 189);
+    height:5em;
+    position: absolute;
+    left: 30em;
+    top:0px;
+}
+
+/* Absolute position against a relative element */
+#ar1 {
+    background-color:rgb(98, 171, 115);
+    height:5em;
+    position: relative;
+}
+
+#ar2 {
+    background-color:rgb(54, 87, 186);
+    height:5em;
+    position: absolute;
+    left: 30em;
+    top: 30px;
+}
+
+/* Fixed position */
+.fd {
+    background-color:rgb(236, 100, 42);
+    height:5em;
+    opacity: 30%;
+}
+#fx {
+    background-color:rgb(182, 191, 6);
+    height:5em;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    opacity: 70%;
+}
+
+/* CSS Floats */
+#floated {
+    float: right;
+}
+
+/* cleared */
+.nfc {
+    clear: right;
+}
+
+
+/* CSS Display */
+.dd {
+    background-color: aqua;
+    height: 5em;
+    margin: 18px;
+}
+.sd {
+    background-color: rgb(212, 0, 255);
+    height: 5em;
+    margin: 18px;
+}
+
+#fd {
+    display: inline
+}
+
+#fs {
+    display: block;
+}
+
+.dib {
+    background-color: rgb(104, 43, 247);
+    height: 5em;
+    margin: 18px;
+    display: inline-block;
+}
+
+/* CSS Units */
+/* pixels */
+.apu {
+    font-size: 50px;
+}
+
+/* relative to view port height/width */
+.rpu-vh {
+    background-color: aquamarine;
+    font-size: 10vh;
+}
+.rpu-vw {
+    background-color: aquamarine;
+    font-size: 10vh;
+}
+
+/* em */
+/* em parent */
+.rpu-p-em {
+    background-color: coral;
+    font-size: 10px;
+}
+/* em based off parent */
+.rpu-em {
+    background-color: coral;
+    font-size: 10em;
+}
+
+/* rem */
+/* doc root is html tag */
+html {
+    font-size: 16px; /* default size */
+}
+
+.rpu-rem {
+    font-size: 10rem;
+    background-color: darkgoldenrod;
+}

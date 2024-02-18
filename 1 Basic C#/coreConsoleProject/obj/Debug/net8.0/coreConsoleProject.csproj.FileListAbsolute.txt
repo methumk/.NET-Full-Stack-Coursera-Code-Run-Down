@@ -1,0 +1,14 @@
+C:\Users\rufus\Desktop\Courses\DotNetFullStack\1week\coreConsoleProject\bin\Debug\net8.0\coreConsoleProject.exe
+C:\Users\rufus\Desktop\Courses\DotNetFullStack\1week\coreConsoleProject\bin\Debug\net8.0\coreConsoleProject.deps.json
+C:\Users\rufus\Desktop\Courses\DotNetFullStack\1week\coreConsoleProject\bin\Debug\net8.0\coreConsoleProject.runtimeconfig.json
+C:\Users\rufus\Desktop\Courses\DotNetFullStack\1week\coreConsoleProject\bin\Debug\net8.0\coreConsoleProject.dll
+C:\Users\rufus\Desktop\Courses\DotNetFullStack\1week\coreConsoleProject\bin\Debug\net8.0\coreConsoleProject.pdb
+C:\Users\rufus\Desktop\Courses\DotNetFullStack\1week\coreConsoleProject\obj\Debug\net8.0\coreConsoleProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rufus\Desktop\Courses\DotNetFullStack\1week\coreConsoleProject\obj\Debug\net8.0\coreConsoleProject.AssemblyInfoInputs.cache
+C:\Users\rufus\Desktop\Courses\DotNetFullStack\1week\coreConsoleProject\obj\Debug\net8.0\coreConsoleProject.AssemblyInfo.cs
+C:\Users\rufus\Desktop\Courses\DotNetFullStack\1week\coreConsoleProject\obj\Debug\net8.0\coreConsoleProject.csproj.CoreCompileInputs.cache
+C:\Users\rufus\Desktop\Courses\DotNetFullStack\1week\coreConsoleProject\obj\Debug\net8.0\coreConsoleProject.dll
+C:\Users\rufus\Desktop\Courses\DotNetFullStack\1week\coreConsoleProject\obj\Debug\net8.0\refint\coreConsoleProject.dll
+C:\Users\rufus\Desktop\Courses\DotNetFullStack\1week\coreConsoleProject\obj\Debug\net8.0\coreConsoleProject.pdb
+C:\Users\rufus\Desktop\Courses\DotNetFullStack\1week\coreConsoleProject\obj\Debug\net8.0\coreConsoleProject.genruntimeconfig.cache
+C:\Users\rufus\Desktop\Courses\DotNetFullStack\1week\coreConsoleProject\obj\Debug\net8.0\ref\coreConsoleProject.dll

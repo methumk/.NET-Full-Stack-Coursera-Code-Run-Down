@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1.2 - CSS simple and combined selectors</title>
+    <link rel="stylesheet" type="text/css" href="index.css" title="index.css">
+</head>
+<body>
+    <p>
+        <h1>Element selectors - tag {} </h1>
+        An element selector will apply the style to all selectors of that type.
+        <h2>First h2 tag</h2>
+        <h3>First h3 tag</h3>
+        <h2>Second h2 tag</h2>
+        <h3>Second h3 tag</h3>
+    </p>
+
+    <p>
+        <h1>Simple selectors - .Class {} and #Id {}</h1>
+        Class and ID selectors will apply styles to those particular classes and IDs
+        <h2 class="red-heading">First h2 tag with red class</h2>
+        <h3 id="first-h3">First h3 tag with id</h3>
+        <h2 >Second h2 tag</h2>
+        <h3 class="red-heading" id="first-h3-2">Second h3 tag with red class and h3-2 id (id takes priority)</h3>
+    </p>
+
+    <p>
+        <h1>Descendent Selectors - parent descendent {} </h1>
+        Descendent selectors will match all descendents regardless of nesting within the parent.<br>
+        Read as any parents (and all of their) descendents.<br>
+        The following matches: div p {color: yellow}. 
+
+        <div>
+            <p>I am a paragraph inside div</p>
+            <p>Second paragraph inside the div</p>
+            <Section>
+                <p>This paragraph is nested inside a section</p>
+            </Section>
+        </div>
+        <p>I am a paragraph outside the div</p>
+    </p>
+
+    <p>
+        <h1>Child Selectors - parent > child {} </h1>
+        Child selectors will only choose first child (nested within parent) of the parent.<br>
+        Read as parent (who created) child.<br>
+        The following matches: div > .child-pg { color: green}
+        <div>
+            <p class="child-pg">I am inside div (child-pg)</p>
+            <p class="child-pg">Second paragraph inside the div (child-pg)</p>
+            <Section>
+                <p class="child-pg">This paragraph is nested inside a section  (grand child-pg)</p>
+            </Section>
+        </div>
+        <p class="child-pg">I am outside the div (child-pg)</p>
+    </p>
+
+    <p>
+        <h1>Adjacent Sibling Selectors - neighbor1 + neighbor2</h1>
+        Adjacent sibling selectors will only match the first adjacent neighbor (neighbor2) from neighbor1. <br>
+        Read as neighbor1 (next to/and) neighbor2.<br>
+        The following matches: parent + .sib-pg {color: purple}
+        <p class="parent">1 I am a parag and parent#1 (parent)</p>
+        <p class="sib-pg">2 I am a parag and p#1's sibling (sib-pg)</p>
+        <p class="parent">3 I am a parag and parent#2 (parent)</p>
+        <p class="sib-pg">4 I am a parag and p#2's sibling (sib-pg)</p>
+        <p class="sib-pg">5 I am a parag and p#2's sibling (sib-pg)</p>
+    </p>
+
+    <p>
+        <h1>General Sibling Selectors - neighbor1 ~ neighbor2</h1>
+        General sibling selector will match all neighbors of type neighbor2 that are adjacent to neighbor1.<br>
+        Read as all neighbor2s (next to) neighbor1.<br>
+        The following matches parent1 ~ .sib-pg1 {color: darkgreen}
+        <p class="parent1">1 I am a parag and parent#1 (parent1)</p>
+        <p class="sib-pg1">2 I am a parag and p#1's sibling  (sib-pg1)</p>
+        <p class="parent1">3 I am a parag and parent#2 (parent1)</p>
+        <p class="sib-pg1">4 I am a parag and p#2's sibling (sib-pg1)</p>
+        <p class="sib-pg1">5 I am a parag and p#2's sibling (sib-pg1)</p>
+    </p>
+</body>
+</html>

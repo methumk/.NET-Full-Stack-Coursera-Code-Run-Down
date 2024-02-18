@@ -1,0 +1,56 @@
+/* Simple selectors */
+/* Element selector */
+body {
+    background-color: aliceblue;
+}
+
+h2 {
+    background-color: blue
+}
+
+/* Class selector */
+.red-heading {
+    background-color: rgb(255, 88, 88);
+}
+
+/* ID selector */
+#first-h3 {
+    background-color: aqua;
+    color:rgb(183, 88, 255);
+}
+
+#first-h3-2 {
+    background-color: rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+}
+
+/* Universal selector */
+* {
+    color: rgb(89, 89, 89);
+}
+
+/* Descentdent selector
+    parent descendent */
+div p {
+    color: rgb(213, 213, 0);
+}
+
+/* Child selector
+    parent > descendent */
+div > .child-pg {
+    color: rgb(0, 213, 39);
+}
+
+/* Adjacent Sibling selector
+    neighbor1 + neighbor2
+ */
+.parent + .sib-pg {
+    color: rgb(200, 74, 145);
+}
+
+/* General Sibling selector
+    neighbor1 ~ neighbor2
+ */
+.parent1 ~ .sib-pg1 {
+    color:rgb(37, 145, 57);
+}

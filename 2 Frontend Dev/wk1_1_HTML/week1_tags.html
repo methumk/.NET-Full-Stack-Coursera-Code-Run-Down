@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1.1 - HTML Tags</title>
+</head>
+<body>
+    <!-- &lt_&gt ... &lt/_&gt -->
+    <h1>All about Tags</h1>
+    <p>
+        <H3>Heading Tag &lth#&gt ... &lt/h#&gt</H3>
+        You can creating heading tags with the &lth#&gt ... &lt/h#&gt, where the number ranges from 1 to 6. Note also how the text content after the heading goes to the next line.
+        <h4>I am a heading tag inside a paragraph tag.</h3> 
+        <h5>I range from h1</h4>
+        <h6>all the way down to h6. Notice how I'm bold</h6>
+        End of heading tag
+    </p>
+    <p>
+        <h3>Paragraph tag &ltp&gt ... &lt/p&gt and &ltbr&gt</h3>
+        Start of paragraph tag. <b>Note</b> how I'm not on the same line as the previous paragraph. <br>
+        Paragraph tags hold text content. All this content currently resides in a paragraph tag. There will be no line breaks. Unless you add the single &ltbr&gt tag<br>
+        While will put you on the next line. End of paragraph tag
+    </p>
+    <p>
+        <h3>Formatting tags</h3>
+        <h4>Bold Tag &ltb&gt ... &ltb&gt</h4>
+        This makes the text element <b>bold</b>.
+        <h4>Italic Tag &lti&gt ... &lt/i&gt</h4>
+        This makes the text element <i>italic</i>.
+        <h4>Underline Tag &ltu&gt ... &lt/u&gt</h4>
+        This makes the text element <u>underlined</u>.
+        <h4>Strikethrough Tag &lts&gt ... &lt/s&gt</h4>
+        This makes the text element <s>striked</s>.
+        <h4>Inserted Tag &ltins&gt ... &lt/ins&gt</h4>
+        This is for inserted text such as correction or addition <s>striked</s><ins>this is inserted</ins>.
+        <h4>Superscript Tag &ltsup&gt ... &lt/sup&gt</h4>
+        Causes text to be <sup>Superscript</sup>.
+        <h4>Subscript Tag &ltsub&gt ... &lt/sub&gt</h4>
+        Causes text to be <sub>Subscript</sub>.
+        <h4>Small Tag &ltsmall&gt ... &lt/small&gt</h4>
+        This causes text to be smaller <small>disclaimer is small</small>.
+        <h4>Mark Tag &ltmark&gt ... &lt/mark&gt</h4>
+        This causes text to be <mark>highlighted</mark>.
+        <br>These tags can be nested and used together. End of formatting tag.
+    </p>
+    <p>
+        <h3>Strong vs Emphasized tags</h3>
+        <h4>Strong Tags &lt strong &gt ... &lt /strong &gt</h4>
+        This is <strong>strong</strong> and looks bold but it tells the browser there is something important in here.
+        <h4>Emphasized Tags &lt em &gt ... &lt /em &gt</h4>
+        This is <em>emphasized</em> and looks italic but the text inside is read by the brower using verbal stress.
+        <br>End of strong vs emphasized tag.
+    </p>
+    <p>
+        <h3>Form and Input Tags</h3>
+        Used to collect data from a user and send it to a server.
+        Form is designated by &lt form &gt ... &lt form &gt and inside contains the tags to hold the inputs and labels. But can also contain text.<br>
+        The input tag ( &lt form ...attributes... /&gt) is a single tag and can contain attributes to hold the value and specifications for that field.<br>
+        The label tag ( &lt label &gt ... &lt /label &gt) contains a text label used to specify the field for the input. Looks exactly like text, you can add a for="id" label which must match up exactly with id attribute in the input tag.<br>
+        The select tag ( &lt select &gt ... &lt /select &gt) is used for creating a drop down. Drop down values can be created with the option tag ( &lt option &gt ... &lt /option &gt).<Br>
+        Checkboxes and radio fields can be checked with the checked attribute. No =".." required.
+        <form action="", method="">
+            <p>This is text content within the form</p>
+            <label for="text-label"> Text: </label>
+            <input types="text" id="text-label" placeholder="This is a placeholder for text"/><br>
+
+            <label for="number-label"> Number: </label>
+            <input type="number" id="number-label" value="0" min="-5" max="5"><br>
+            
+            <label for="email-label"> Email: </label>
+            <input type="email" id="email-label" value="email@gmail.com"/><br>
+            
+            <label for="password-label"> Password: </label>
+            <input type="password" id="password-label" value="Password" required="true"/><br>
+            
+            <label for="date-label"> Date: </label>
+            <input type="date" id="date-label" value="Date label"/><br>
+            
+            <label for="file-label"> File: </label>
+            <input type="file" id="file-label" value="File label"/><br>
+            
+            <label for="hidden-label"> Hidden: </label>
+            <input type="hidden" id="hidden-label" value="Hidden label"/><br>
+            
+            <label for="Radio-label"> Radio: </label>
+            <input type="Radio" id="Radio-label" value="Radio label"/><br>
+
+            <label for="checkbox-label"> Checkbox: </label>
+            <input type="checkbox" id="checkbox-label" checked/><br>
+
+            <label for="dropdown-label"> Dropdown: </label>
+            <select>
+                <option>1st option</option>
+                <option>2nd option</option>
+                <option>3rd option</option>
+            </select><br>
+            
+            <label for="submit-label"> Submit: </label>
+            <input type="submit" id="submit-label" value="Submit label"/><br>
+        </form>
+    </p>
+
+    <p>
+        <h3>Iframe Tag &lt iframe &gt ... &lt /iframe &gt</h3>
+        This is a tool to embed content from other websites. It requires the src attribute to link to another url (src="url") and can take other optional attributes like width to adjust the size.<br>
+        You may also need api keys to access other sites like google maps.<br>
+        The following youtbe link is the youtube embed link.
+        <br>
+        <iframe 
+            width="895" 
+            height="503" 
+            src="https://www.youtube.com/embed/vjnj5HNe13k" 
+            title="McAfee reveals something about Shane" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>Youtube video
+        </iframe>
+    </p>
+
+    <p>
+        <h3>Image Tag &lt image &gt ... &lt /image &gt</h3>
+        Single tag that allows you to embed an image to the webpage through a url. The src attribute specifies the source of the image.<br>
+        A bunch of other attribute Tags, but one used commonly is the alt attribute which allows you to set text in case the image fails to load
+        <br>
+        <img 
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Regular_triangle.svg/800px-Regular_triangle.svg.png"
+            alt="Secret Text"
+            width="150"
+            height="150"
+        />
+    </p>
+
+    <p>
+        <h3>Aduio/Video Tag &lt audio/video &gt ... &lt /audio/video &gt</h3>
+        Used to embed audio/video content to a webpage. It has attributes like src, control, etc. Can also provide audio descriptions. <br>
+        Without the controls attribute you will not be able to see the audo label and is essentially the same as marking it as hidden. However, you can display videos without the controls tag but it won't play unless you have the autoplay attr or the controls attr. <br>
+        The video tag can show audio or mp4 and audio only shows ogg. Once specifying the aduio or video tag, you can add the single tag source (&lt source &gt ... &lt /source &gt) to link to the source and descript the content type.
+        <br>
+        <h6>Audio:</h6>
+        <audio controls loop autoplay>
+            <source src="content/ZZ Top - La Grange.mp3"/>
+        </audio>
+        <h6>Video:</h6>
+        <video autoplay loop muted>
+            <source src="content/stat.mp4"/>
+        </video>
+    </p>
+
+    <p>
+        <h3>List Tags</h3>
+        There are multiple list tags and they allow you to created listed items. Lists items should be contained within the list item tag &lt li &gt ... &lt /li &gt<br>
+        Ordered list is a list with numbers before the actual text to create order: &lt ol &gt ... &lt /ol &gt. 
+        <ol>
+            <li>first</li>
+            <li>second</li>
+            <li>third</li>
+        </ol>
+        <br>
+        Unorderd list is like a bullet point. &lt ul &gt ... &lt /ul &gt. The next line will automatically be newlined.
+        <ul>
+            <li>first</li>
+            <li>second</li>
+            <li>third</li>
+        </ul>
+    </p>
+
+    <p>
+        <h3>Table Tags</h3>
+        Table tags help you create tables. You can add structure with the optional &lt thead &gt ... &lt /thead &gt, &lt tbody &gt ... &lt /tbody &gt, and &lt tfoot &gt ... &lt /tfoot &gt tags.<br>
+        These tags help you to structure data for the header columns, the data in the body, and the data in the footer accordingly.<br>
+        To actually create the table, you first create it with the &lt table &gt ... &lt /table &gt tag.<Br>
+        Then create a row with the &lt tr &gt ... &lt /tr &gt tag. Inside the tr tag, you can add individual column data with the &lt td &gt ... &lt /td &gt tag. Header data should be created with the &lt th &gt ... &lt /th &gt tag, but can still be in a tr row.
+        <br>
+        Just using this will not display the bars for the columns and heights. Border should be controlled by css.
+        <br>
+        <table>
+            <colgroup>
+                <col style="background-color: #0f0" />
+                <col span="2" />
+              </colgroup>
+            <thead>
+                <tr>
+                    <th>Col1</th>
+                    <th>Col2</th>
+                    <th>Col3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>foot 1</td>
+                    <td>foot 2</td>
+                    <td>foot 3</td>
+                </tr>
+            </tfoot>
+        </table>
+    </p>
+
+    <p>
+        <h3>Semantic vs non-semantic</h3>
+        <h5>Semantic Tags</h5>
+        Semantic tags are used to provide meaning and context to the content they surround. They can help search engines and assitive tech to understand structure and purpose of content.<br>
+        Some common semantic tags:
+        <ul>
+            <li>header</li>
+            <li>nav</li>
+            <li>article</li>
+            <li>section</li>
+            <li>table</li>
+            <li>heading</li>
+            <li>etc</li>
+        </ul>
+        <h5>Non-Semantic Tags</h5>
+        Don't provide specific meaning or context but are mostly just used for organizing and formatting content.<br>
+        E.g. Div tag can contain anything, image, text, form, etc, so it's existence doesn't give us any meaning but can add structure.
+        Some common non-semantic tags:
+        <ul>
+            <li>div</li>
+            <li>span</li>
+            <li>etc</li>
+        </ul>
+    </p>
+</body>
+</html>

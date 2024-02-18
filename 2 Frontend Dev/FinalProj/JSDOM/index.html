@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Web page using HTML/CSS</title>
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<style>
+    body {
+        background-color: white;
+        color: rgb(255, 0, 0);
+        font-family: "Arial";
+    }
+    #nav-bear {
+        width: 50%;
+        height: 185px;
+        object-fit: cover;
+        object-position: 0 50%;
+        z-index: 1;
+        -webkit-box-reflect: right;
+    }
+    .nav-bar-ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: black;
+        width: 100%;
+        z-index: 1;
+    }
+    .nav-bar-li a{
+        float: left;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    .nav-bar-li a:hover {
+        background-color: aquamarine;
+        color: gray !important;
+    }
+    #holding-bear {
+        max-width:10em;
+    }
+    .floated-img{
+        padding: 0.6em;
+        border-color: rgb(218, 218, 218);
+        border-style: solid;
+        background-color: rgb(65, 65, 65);
+    }
+    .float-right {
+        float: right;
+        margin-left: 1em;
+    }
+    .float-left {
+        float: left;
+        margin-right: 1em;
+    }
+    .division {
+        display: inline-block;
+    }
+    .numerator {
+        display: block;
+    }
+    .denominator {
+        display: block;
+        text-decoration: overline;
+    }
+    .img-gall {
+        background-color:whitesmoke;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax (10em, auto);
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+    .grid-item {
+        background-color: whitesmoke;
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 5px;
+        font-size: 30px;
+        text-align: center;
+        transition: transform 0.7s ease-in-out; 
+    }
+    .grid-item:hover{
+        background-color: black;
+        transform: scale(1.1);
+    }
+    .grid-item img{
+        width: 10em;
+        height: 8em;
+    }
+    iframe {
+        width:500px;
+        height:300px;
+    }
+    .div-header {
+        text-transform: uppercase;
+        word-spacing: 0.05em;
+        letter-spacing: 1em;
+        transition: text-shadow 0.7s ease-in-out;
+    }
+    .div-header:hover {
+        text-shadow: 0.3em 0.38em 0.3em rgb(255, 0, 0);
+    }
+    #bear-loading {
+        display: none;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1em;
+        width: 2.3em;
+    }
+</style>
+<body>
+    <div class="nav-header">
+        <img id="nav-bear" src="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Fsundaytimes%2Fprod%2Fweb%2Fbin%2Fdff26700-02dd-11e9-b3c0-56b0c89cd9f9.jpg?crop=2667%2C1500%2C0%2C0&resize=1200">
+        <div id="nav-bar-container">
+            <ul class="nav-bar-ul">
+                <li class="nav-bar-li"><a href="#bear-1">Bear Info</a></li>
+                <li class="nav-bar-li"><a href="#bear-2">Bear Gallery</a></li>
+                <li class="nav-bar-li"><a href="#bear-3">Important Bear Fighting Videos</a></li>
+                <li class="nav-bar-li"><a href="#bear-4">Bear Wiki</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="info-body">
+        <div class="body-div">
+            <h1 class= "div-header" id="bear-1">
+                Bear Info
+            </h1>
+            <p>
+                Bears are carnivoran mammals of the family Ursidae. They are classified as caniforms, or doglike carnivorans. Although only eight species of bears are extant, they are widespread, appearing in a wide variety of habitats throughout most of the Northern Hemisphere and partially in the Southern Hemisphere. Bears are found on the continents of North America, South America, and Eurasia. Common characteristics of modern bears include large bodies with stocky legs, long snouts, small rounded ears, shaggy hair, plantigrade paws with five nonretractile claws, and short tails.
+            </p>
+            <p class="floated-img float-right">
+                <img id="holding-bear" src="https://i.natgeofe.com/n/104b44e8-4083-4298-a4fa-15eb58eaea91/wesley-larson-radio-collar-bear_3x4.jpg">
+            </p>
+            <p>
+                While the polar bear is mostly carnivorous, and the giant panda is mostly herbivorous, the remaining six species are omnivorous with varying diets. With the exception of courting individuals and mothers with their young, bears are typically solitary animals. They may be diurnal or nocturnal and have an excellent sense of smell. Despite their heavy build and awkward gait, they are adept runners, climbers, and swimmers. Bears use shelters, such as caves and logs, as their dens; most species occupy their dens during the winter for a long period of hibernation, up to 100 days.
+
+                Bears have been hunted since prehistoric times for their meat and fur; they have also been used for bear-baiting and other forms of entertainment, such as being made to dance. With their powerful physical presence, they play a prominent role in the arts, mythology, and other cultural aspects of various human societies. In modern times, bears have come under pressure through encroachment on their habitats and illegal trade in bear parts, including the Asian bile bear market. The IUCN lists six bear species as vulnerable or endangered, and even least concern species, such as the brown bear, are at risk of extirpation in certain countries. The poaching and international trade of these most threatened populations are prohibited, but still ongoing.
+            </p>
+            <p>
+                Bears are generally bulky and robust animals with short tails. They are sexually dimorphic with regard to size, with males typically being larger. Larger species tend to show increased levels of sexual dimorphism in comparison to smaller species. Relying as they do on strength rather than speed, bears have relatively short limbs with thick bones to support their bulk. The shoulder blades and the pelvis are correspondingly massive. The limbs are much straighter than those of the big cats as there is no need for them to flex in the same way due to the differences in their gait. The strong forelimbs are used to catch prey, excavate dens, dig out burrowing animals, turn over rocks and logs to locate prey, and club large creatures.
+            </p>
+            <p class="floated-img float-left">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Teufelsh%C3%B6hle-H%C3%B6hlenb%C3%A4r-Dreiviertelprofil.jpg/220px-Teufelsh%C3%B6hle-H%C3%B6hlenb%C3%A4r-Dreiviertelprofil.jpg">
+            </p>
+            <p>
+                Unlike most other land carnivorans, bears are plantigrade. They distribute their weight toward the hind feet, which makes them look lumbering when they walk. They are capable of bursts of speed but soon tire, and as a result mostly rely on ambush rather than the chase. Bears can stand on their hind feet and sit up straight with remarkable balance. Their front paws are flexible enough to grasp fruit and leaves. Bears' non-retractable claws are used for digging, climbing, tearing, and catching prey. The claws on the front feet are larger than those on the back and may be a hindrance when climbing trees; black bears are the most arboreal of the bears, and have the shortest claws. Pandas are unique in having a bony extension on the wrist of the front feet which acts as a thumb, and is used for gripping bamboo shoots as the animals feed. 
+            </p>
+            <p>
+                Most mammals have agouti hair, with each individual hair shaft having bands of color corresponding to two different types of melanin pigment. Bears however have a single type of melanin and the hairs have a single color throughout their length, apart from the tip which is sometimes a different shade. The coat consists of long guard hairs, which form a protective shaggy covering, and short dense hairs which form an insulating layer trapping air close to the skin. The shaggy coat helps maintain body heat during winter hibernation and is shed in the spring leaving a shorter summer coat. Polar bears have hollow, translucent guard hairs which gain heat from the sun and conduct it to the dark-colored skin below. They have a thick layer of blubber for extra insulation, and the soles of their feet have a dense pad of fur. While bears tend to be uniform in color, some species may have markings on the chest or face and the giant panda has a bold black-and-white pelage.
+            </p>
+            <p class="floated-img float-right">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Ursus_arctos_01_MWNH_145_%28cropped%29.JPG/220px-Ursus_arctos_01_MWNH_145_%28cropped%29.JPG">
+            </p>
+            <p>
+                Bears have small rounded ears so as to minimize heat loss, but neither their hearing or sight are particularly acute. Unlike many other carnivorans they have color vision, perhaps to help them distinguish ripe nuts and fruits. They are unique among carnivorans in not having touch-sensitive whiskers on the muzzle; however, they have an excellent sense of smell, better than that of the dog, or possibly any other mammal. They use smell for signalling to each other (either to warn off rivals or detect mates) and for finding food. Smell is the principal sense used by bears to locate most of their food, and they have excellent memories which helps them to relocate places where they have found food before.
+            </p>
+            <p>
+                The skulls of bears are massive, providing anchorage for the powerful masseter and temporal jaw muscles. The canine teeth are large but mostly used for display, and the molar teeth flat and crushing. Unlike most other members of the Carnivora, bears have relatively undeveloped carnassial teeth, and their teeth are adapted for a diet that includes a significant amount of vegetable matter. Considerable variation occurs in dental formula even within a given species. This may indicate bears are still in the process of evolving from a mainly meat-eating diet to a predominantly herbivorous one. Polar bears appear to have secondarily re-evolved carnassial-like cheek teeth, as their diets have switched back towards carnivory. Sloth bears lack lower central incisors and use their protrusible lips for sucking up the termites on which they feed. The general dental formula for living bears is: 
+                <span class="division">
+                    <span class="numerator">
+                        3.1.2-4.2
+                    </span>
+                    <span class="denominator">
+                        3.1.2-4.3
+                    </span>
+                </span>
+                
+. The structure of the larynx of bears appears to be the most basal of the caniforms. They possess air pouches connected to the pharynx which may amplify their vocalizations.
+            </p>
+            <p>
+                Bears of northern regions, including the American black bear and the grizzly bear, hibernate in the winter. During hibernation, the bear's metabolism slows down, its body temperature decreases slightly, and its heart rate slows from a normal value of 55 to just 9 beats per minute. Bears normally do not wake during their hibernation, and can go the entire period without eating, drinking, urinating, or defecating. A fecal plug is formed in the colon, and is expelled when the bear wakes in the spring. If they have stored enough body fat, their muscles remain in good condition, and their protein maintenance requirements are met from recycling waste urea. Female bears give birth during the hibernation period, and are roused when doing so.
+            </p>
+            <p>
+                Bears do not have many predators. The most important are humans, and as they started cultivating crops, they increasingly came in conflict with the bears that raided them. Since the invention of firearms, people have been able to kill bears with greater ease. Felids like the tiger may also prey on bears, particularly cubs, which may also be threatened by canids.
+            </p>
+            <p>
+                Bears are parasitized by eighty species of parasites, including single-celled protozoans and gastro-intestinal worms, and nematodes and flukes in their heart, liver, lungs and bloodstream. Externally they have ticks, fleas and lice. A study of American black bears found seventeen species of endoparasite including the protozoan Sarcocystis, the parasitic worm Diphyllobothrium mansonoides, and the nematodes Dirofilaria immitis, Capillaria aerophila, Physaloptera sp., Strongyloides sp. and others. Of these, D. mansonoides and adult C. aerophila were causing pathological symptoms. By contrast, polar bears have few parasites; many parasitic species need a secondary, usually terrestrial, host, and the polar bear's life style is such that few alternative hosts exist in their environment. The protozoan Toxoplasma gondii has been found in polar bears, and the nematode Trichinella nativa can cause a serious infection and decline in older polar bears. Bears in North America are sometimes infected by a Morbillivirus similar to the canine distemper virus. They are susceptible to infectious canine hepatitis (CAV-1), with free-living black bears dying rapidly of encephalitis and hepatitis.
+            </p>
+            <p>
+                Several bear species are dangerous to humans, especially in areas where they have become used to people; elsewhere, they generally avoid humans. Injuries caused by bears are rare, but are widely reported. Bears may attack humans in response to being startled, in defense of young or food, or even for predatory reasons.
+            </p>
+            <a href="https://en.wikipedia.org/wiki/Bear">Info Source</a>
+            <hr>
+        </div>
+
+        <div class="body-div">
+            <h1 class= "div-header" id="bear-2">
+                Bear Gallery
+            </h1>
+            <div class="img-gall">
+                <div class="grid-item">
+                    <img src="https://preview.redd.it/bzlwb70c2of61.jpg?width=640&crop=smart&auto=webp&s=346d3258182cf981ff7428255394ca7cba9f8f7e">
+                </div>
+                <div class="grid-item">
+                    <img src="https://preview.redd.it/62ut0u405ba61.jpg?width=640&crop=smart&auto=webp&s=a25cb5425a6af6544c9e6ed430338f6c303cb74a">
+                </div>
+                <div class="grid-item">
+                    <img src="https://preview.redd.it/ilvmub6x8aq61.jpg?width=640&crop=smart&auto=webp&s=709ba2236e20263630af0f7079b129173968b468">
+                </div>
+                <div class="grid-item">
+                    <img src="https://preview.redd.it/xxzx8ismp9v41.jpg?width=640&crop=smart&auto=webp&s=8d78fe4332924faa6d69bde284579684312c10b4">
+                </div>
+                <div class="grid-item">
+                    <img src="https://preview.redd.it/b8n1d881e2s71.jpg?width=640&crop=smart&auto=webp&s=bda26cddc4b429bad9c995edd329dd9109f09942">
+                </div>
+                <div class="grid-item">
+                    <img src="https://preview.redd.it/c4tlul91e2s71.jpg?width=1080&crop=smart&auto=webp&s=a9b4fe2a37860056261eedaf78ec78f343d83539">
+                </div>
+                <div class="grid-item">
+                    <img src="https://preview.redd.it/botva2oomuq61.jpg?width=640&crop=smart&auto=webp&s=ed32132c1de4d83f3172cecf9695dd994b65038e">
+                </div>
+                <div class="grid-item">
+                    <img src="https://preview.redd.it/9ro68c7fpfx81.jpg?width=640&crop=smart&auto=webp&s=1f95b9450c7a2eaf9e8de905425a3b42fcb48d69">
+                </div>
+                <div class="grid-item">
+                    <img src="https://preview.redd.it/7uy1rh73wet71.jpg?width=640&crop=smart&auto=webp&s=532e7addd99f4254b7774939e1654ea3954d89da">
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="body-div">
+            <h1 class= "div-header" id="bear-3">
+                Bear Fights
+            </h1>
+            <div>
+                <h2>Classic Bear Fight 🐻</h2>
+                <iframe width="893" height="502" src="https://www.youtube.com/embed/kccJfnfFLC0" title="Alaskan Monster Bears Go At It" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div>
+                <h2>Impressive Wrestling 🤼‍♂️</h2>
+                <iframe src="https://www.youtube.com/embed/2NtpbINkdZo" title="Epic Grizzly Bear Fight for Mating Rights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div>
+                <h2>He Knows his Judo Well 🥋</h2>
+                <iframe src="https://www.youtube.com/embed/gP92j-uEnps" title="John West - Bear (2000, UK)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <hr>
+        </div>
+
+        <div class="body-div">
+            <label for="bears-select"><h1 class= "div-header" id="bear-4">Learn More</h1></label>
+            <select name="bears-select" id="allbears" onchange="dropdownSelect()">
+                <option value="none">None Selected</option>
+                <option value="Brown">Brown Bear</option>
+                <option value="Black">Black Bear</option>
+                <option value="Polar">Polar Bear</option>
+                <option value="Grizzly">Grizzly Bear</option>
+                <option value="Panda">Panda Bear</option>
+                <option value="Sun">Sun Bear</option>
+            </select>
+            <div class="loading-cntr">
+                <img id="bear-loading" src="https://i.stack.imgur.com/FhHRx.gif"/>
+            </div>
+            <div id="bear-data"></div>
+            <hr>
+        </div>
+    </div>
+</body>
+<script>
+    getSectionsURL= (page) => {return `https://en.wikipedia.org/w/api.php?origin=*&action=parse&format=json&page=${page}&prop=sections&disabletoc=1`}
+    getSectionDataURL = (page, sectionIdx) => {return `https://en.wikipedia.org/w/api.php?origin=*&action=parse&format=json&page=${page}&prop=wikitext&section=${sectionIdx}&disabletoc=1`}
+    
+    const pages = {
+        "Brown" : "Brown_bear",
+        "Black" : "American_black_bear",
+        "Polar" : "Polar_bear",
+        "Grizzly" : "Grizzly_bear",
+        "Panda" : "Giant_panda",
+        "Sun" : "Sun_bear",
+    }
+
+    const sections = {
+        "Brown" : "Description",
+        "Black" : "Description",
+        "Polar" : "Taxonomy",
+        "Grizzly" : "Classification",
+        "Panda" : "Description",
+        "Sun" : "Characteristics",
+    }
+    const brackrgx = /\[\[(?=File)[^\]]*\]+/gi;
+    const anglergx = /\<[^\>]*\>/gi;
+    const sqigrgx = /\{\{(?!cvt|convert)[^\}]*\}+/gi;
+    const rmvbrckrgx = /(\[\[)|(\]\])/g
+    const convrgx = /(\{\{convert\|)|(\|\w+\|sigfig=\d+)|(\|\w+\|abbr=on)|(\}\})/gi
+    const cvtrgx = /(\{\{cvt\|)/gi
+    const barrgx = /\|/g
+    const head3rgx = /(==)([A-Za-z0-9\s'"]+)(==)/gi
+    const head4rgx = /(===)([A-Za-z0-9\s'"]+)(===)/gi
+    const head5rgx = /(====)([A-Za-z0-9\s'"]+)(====)/gi
+
+    <!-- Get data from wikipedia -->
+    function getSectionInfo(page, section){
+        document.getElementById('bear-data').innerHTML = "";
+        document.getElementById('bear-loading').style.display = 'block';
+
+        $.get(getSectionsURL(page), (data, status) => {
+            console.log(data.parse.sections)
+            let sectionData = data.parse.sections.find((e) => e.line === section)
+            let idx = sectionData.index
+            console.log(sectionData)
+            console.log(sectionData.index)
+            
+            $.get(getSectionDataURL(page, idx), (data, status) => {
+                let info = data.parse.wikitext["*"]
+                console.log(info)
+                let infocleaned = info
+                    .replaceAll(brackrgx, "")
+                    .replaceAll(anglergx, "")
+                    .replaceAll(sqigrgx, "")
+                    .replaceAll(rmvbrckrgx, "")
+                    .replaceAll(convrgx, "")
+                    .replaceAll(cvtrgx, "")
+                    .replaceAll(head5rgx, "<h5>$2</h5>")
+                    .replaceAll(head4rgx, "<h4>$2</h4>")
+                    .replaceAll(head3rgx, "<h3>$2</h3>")
+                    .replaceAll(barrgx, " ")
+                console.log(infocleaned)
+
+                document.getElementById('bear-loading').style.display = 'none';
+
+                var bear_data = document.getElementById('bear-data')
+                bear_data.innerHTML = infocleaned;
+            })
+        });
+    }
+    
+    function dropdownSelect(){
+        var value = document.getElementById('allbears').value;
+        if (value !== 'none')
+        {
+            getSectionInfo(pages[value], sections[value])
+        }
+    }
+    
+</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. Using AJAX to load content dynamically</title>
+</head>
+<body>
+    <h1>Users</h1>
+    <ul id="userList">
+
+    </ul>
+</body>
+<script>
+    const userList = document.getElementById('userList')
+    const xhr = new XMLHttpRequest();
+
+    // Call back function to handle response
+    xhr.onreadystatechange = function(){
+        if (xhr.readyState === XMLHttpRequest.DONE){
+            if (xhr.status === 200)
+            {
+                const userData = JSON.parse(xhr.responseText)
+                
+                // Create elements dynamically
+                userData.forEach((user) => {
+                    const newUser = document.createElement('li')
+                    const newUserText = document.createTextNode(user.name)
+                    newUser.append(newUserText)
+                    userList.appendChild(newUser)
+                })
+            }else
+            {
+                console.log("Request error")
+            }
+        }
+    }
+
+    xhr.open('GET', 'https://jsonplaceholder.typicode.com/users')
+    xhr.send()
+</script>
+</html>

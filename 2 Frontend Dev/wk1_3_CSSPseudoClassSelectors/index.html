@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1.3 - CSS pseudo-class selectors</title>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+</head>
+<body>
+    <h1>Pseudo-class Selectors</h1>
+    <p>
+        <h3>:hover selector</h3>
+        This allows you to style elements when you hover over it.<br>
+        <button>🤡🤡🤡</button>
+    </p>
+    <p>
+        <h3>:active selector</h3>
+        This allows you to style elements when you have activated it.<br>
+        <button id="monkey-button">🐒</button>
+    </p>
+    <p>
+        <h3>:visited selector</h3>
+        This allows you to style links that have been visited by the user. It should turn green when you visit it.<br>
+        <a id="vis-eg" href="###">Visit my link</a>
+    </p>
+    <p>
+        <h3>:focus selector</h3>
+        This allows you to style elements when they go into focus.<br>
+        <input type="date" id="focus-eg">
+    </p>
+    <p>
+        <h3>:nth-child selector</h3>
+        This allows you to select elements based on their position to the parent to apply a style.<br>
+        You can either style every other element or select a specific element based on position.<br>
+        The syntax for it is: &ltnchild&gt:nth-child(&ltindex&gt), where the index is ones-based. Below highlights index 5
+        <ul>
+            <li class="nchild-eg">1</li>
+            <li class="nchild-eg">2</li>
+            <li class="nchild-eg">3</li>
+            <li class="nchild-eg">4</li>
+            <li class="nchild-eg">5</li>
+        </ul>
+        You can also select more than one element with the selector. Using "n" (starts at index 0) as a variable within the function.<br>
+        Below should highlight only the odd elements. <b>NOTE: </b>If you do 2n-1 or -2 or more they will work for the current values available. But if you go above with + (e.g. +5), they map to the actual value so 2(0)+5 = 7 and it will try to attach to element 7.
+        <ul>
+            <li class="nchild-eg2">1</li>
+            <li class="nchild-eg2">2</li>
+            <li class="nchild-eg2">3</li>
+            <li class="nchild-eg2">4</li>
+            <li class="nchild-eg2">5</li>
+        </ul>
+    </p>
+    <p>
+        <h3>:first-child selector</h3>
+        This allows you to select the first child element of a parent.<br>
+        This will style first element differently from the rest.<br>
+        <b>Note: </b>that it will change the style of all first children that match even if nested
+        <ol>
+            <li class="fchild-eg">1</li>
+            <li class="fchild-eg">2</li>
+            <li class="fchild-eg">3</li>
+            <li class="fchild-eg">4</li>
+            <li class="fchild-eg">5</li>
+            <ol>
+                <li class="fchild-eg">6 (Nested)</li>
+                <li class="fchild-eg">7</li>
+                <li class="fchild-eg">8</li>
+            </ol>
+            <li class="fchild-eg">9 (Note I'm not styled)</li>
+            <li class="fchild-eg">10</li>
+        </ol>
+        <h3>:last-child selector</h3>
+        This allows you to select the last child element of a parent.<br>
+        This will style last element differently from the rest.<br>
+        <b>Note: </b>that it will change the style of all last children that match even if nested
+        <ol>
+            <li class="lchild-eg">1</li>
+            <li class="lchild-eg">2</li>
+            <li class="lchild-eg">3</li>
+            <li class="lchild-eg">4</li>
+            <li class="lchild-eg">5</li>
+            <ol>
+                <li class="lchild-eg">6 (Nested)</li>
+                <li class="lchild-eg">7</li>
+                <li class="lchild-eg">8</li>
+            </ol>
+            <li class="lchild-eg">9</li>
+            <li class="lchild-eg">10</li>
+        </ol>
+    </p>
+    <p>
+        <h1>Pseudo-Elements</h1>
+        Pseudo elements are used to style speficied parts of an element. E.g. inserting content before, after content of another element or styling first letter in an element.<br>
+        This is different from nth-child in the sense that nth-child selects elements as a whole, where this targets a specific part in the element itself.<br>
+        In addition, unlike pseudo-class selectors, pesudo elements are designated by double colons (::), but you can technically still use signle colon (until they introduce new pseudo elements).<br>
+        <h3>::before</h3>
+        Format: &ltelement&gt::before {}<Br>
+        You can add content before the main element.
+        <p id="pe-eg-bf">Active</p>
+        <h3>::after</h3>
+        Format: &ltelement&gt::after {}<Br>
+        You can add content after the main element.
+        <p id="pe-eg-af">Active</p>
+        <h3>::first-line and ::first-letter</h3>
+        Format &ltelement&gt::first-line/letter {}<Br>
+        Like their name suggests they apply style to either the first line or the first letter
+        <h4>::first-line</h4>
+        Styles the first line (can't add content)
+        <p id="fle-eg">Blah blah blah blah blah blaah blah blha blah blah balbha blah blah blaah hhhhb alah blah blahaa blah blah blah blahb blahbhabh blabha babhl ablh balhb alhab alhb ablh alhb ablh abhl balh balhab hlab lahblahbabhl abhl abh llahb lahb ablh blbhalh bhlb blhab bahablbhb lbahbalh b blahlahbla ablhba lbahlablh bahl balh abhl bal abhl ablh abhlab hlabhl abhl blahblah b blahablh.</p>
+        <h4>::first-letter</h4>
+        Styles the first letter (can't add content)
+        <p id="flr-eg">Blah blah blah blah blah blaah blah blha blah blah balbha blah blah blaah hhhhb alah blah blahaa blah blah blah blahb blahbhabh blabha babhl ablh balhb alhab alhb ablh alhb ablh abhl balh balhab hlab lahblahbabhl abhl abh llahb lahb ablh blbhalh bhlb blhab bahablbhb lbahbalh b blahlahbla ablhba lbahlablh bahl balh abhl bal abhl ablh abhlab hlabhl abhl blahblah b blahablh.</p>
+    </p>
+    <p>
+        <h1>Attribute Selector</h1>
+        Allows you to style elements based on elements attributes.<br>
+        Format: &ltelement&gt[css-attribute] {}<br>
+        Below has targets .as-eg[href^="http"] {}. Where each link is of class as-eg.<br>
+        <a class="as-eg" href="#">Internal 1</a>
+        <a class="as-eg" href="https://www.youtube.com/">Youchoob</a>
+        <a class="as-eg" href="#">Internal 3</a>
+        <a class="as-eg" href="https://www.google.com/">Goojle</a>
+        <br>
+        You can also do it based on the attribute value.<Br>
+        <input class="asv-eg" type="text" placeholder="This has been styled"/><Br>
+    </p>
+    <p>
+        <h1>CSS Font Properties</h1>
+        Stylize texts.
+        <h3>Property: Font-size</h3>
+        <p id="fp-small">This text is small.</p>
+        <p id="fp-medium">This text is medium.</p>
+        <p id="fp-large">This text is large.</p>
+        <p id="fp-larger">This text is larger.</p>
+        <p id="fp-50px">This text is 10px.</p>
+        <p id="fp-50em">This text is 10em.</p>
+        <h3>Property: Font-style, Font-weight, Text-transform, Font-family</h3>
+        <p id="fp-italic">This text is italic (font style)</p>
+        <p id="fp-bold">This text is bold (font weight)</p>
+        <p id="fp-bolder">This text is bolder (font weight)</p>
+        <p id="fp-400">This text is bold at 400 (font weight)</p>
+        <p id="fp-capitalized">This text is capitalized (Text-transform)</p>
+        <p id="fp-family">This text is monospaced (font family)</p>
+    </p>
+    <p>
+        <h1>CSS Positions</h1>
+        Allows you to control the position of elements on a webpage and how they'll appear on to the user on a viewport.<br>
+        <h3>Static</h3>
+        Static elements are default positions of all elements. They cannot be moved or repositioned with CSS.
+        <div id="p1">This div block only has background color and height in CSS.</div>
+        The above div is static because it's the default position. And you cannot move it with other move properties.
+        <br>
+
+
+        <h3>Relative</h3>
+        Relative positioning allows you to position an elemment relative to its normal position.
+        <br>E.g. top, boottom,. left, right. These will let you choose how much space you want from the original top,bottom, left, right positions.
+        <br>E.g. top: 20px will move the item 20px DOWN from the top of the static position. These will move AWAY from the positional property.
+        <br>
+        <div id="r1">First Div</div>
+        <div id="r2">This is moved relatively to the right and to the top (left 100px; bottom 50px)</div>
+        <div id="r3">This is <br>where the<br> relatively positioned<br> div would be if it weren't moved</div>
+        <br>
+
+
+        <h3>Absolute</h3>
+        Allows you to position element relative to its nearest position and to an extra element. If no extra element is provided, it's positioned relative to initial containg block (the body element) 
+        <div class="a1">First Div only has background color and height</div>
+        <div id="a2">Absolute Div</div>
+        <div class="a1">First Div only has background color and height</div>
+        <div class="a1">First Div only has background color and height</div>
+        <br>
+        Applying absolute property, removes element from normal flow of the HTML doc. You can also adjust it's position using top, bottom, left, right.<br>
+        <div id="a3">Absolute Div positioned without relative element at top of body and to the right of the body (left: 30em, top: 0px). <b>This will make sense when you get to absolute positioning.</b></div>
+        Go to the top to see an example on absolute positioning. That block goes to the top because it has no element that it was relatively positoned to, so it gets relatively positioned against the body, which is why putting top:0px moves it to the top of the page.
+        <br>
+
+        <h4>Absolute positioned relative to element</h4>
+        This requires the position that needs to be absolute to be nested in the parent element in which it uses as it's original position. 
+        <br>Second requirement is that the parent position is relative, otherwise this won't work.
+        <div id="ar1">This is the relatively positioned normall (parent div - relative position)
+            <div id="ar2">This is the absolute positioned div against the relative div (nested div - absolute position)</div>
+        </div>
+        <br>
+
+
+        <h3>Fixed</h3>
+        <div id = "fx">This Div is fixed<Br><b>Look at fixed position for more details</b><br></div>
+       The fixed position is different from the common flow of the HTML doc, and scrolling doesn't change the position of the element - meaning it's position is <b>relative to the viewport (visible are of browser)</b>.
+       <br>To create fixed position, you just have to add the position as fixed and set the location using top, bottom, left, right properties like before. Not relative to anything else.
+    </p>
+    <p>
+        <h1>CSS Floats</h1>
+        Allows you to create multi column layouts and wrap text around images or other elements. Allows you to position an element on right or left side of its container.<br>
+        This creates space for other content to flow around it, which can help you create multicolumn layouts or positoning images alongside text.<br>
+        Often used in conjunction with the <b>clear</b> property which controls beahvior of elements following a floated element.<br>
+        Float can have values left (elements float to the left of its container), right (float to right of container), none (element doesn't float displayed where it occurs in text) - default, inherit (inherits float of parent)<br>
+        <p id="floated">This is the text that is <b>floated to the right.</b><br>It is done so by using the property float: right;<br> Notice how it's pushed to the right side. <br> Adding more stuff to make this bigger.<br>Blah blah blah blah<br>blah blah blah blah<br></p>
+        <p class="nf">This is text 1</p>
+        <p class="nf">This is text 2 and has no properties attached to it. Notice how it lines up with floated text.</p>
+        <p class="nfc">This is text 2.5 and has the clear: right; property. Notice how it falls below the floated text. Clearing right means it won't adjust itself for the floated element. </p>
+        <p>This is text 3 it has no properties and falls below the text 2</p>
+    </p>
+    <p>
+        <h1>CSS Display</h1>
+        Used to specify the display behavior (type of rendering box used in an HTML element which affects how it's rendered) of an alement
+        <br>
+        <ul>
+            <li>Block: Creates a new line and takes up the full width of their container</li>
+            <li>Inline: Elements flow with text and take up as only as much width as necessary</li>
+            <li>Inline Block: Hybrid of the two, allow for text flow and can take additional space as needed.</li>
+        </ul>
+        <div class="dd">First div</div>
+        <div class="dd">Second div</div>
+        <div class="dd">Third div</div>
+        <span class="sd">First span</span>
+        <span class="sd">Second span</span>
+        <span class="sd">Third span</span>
+        <br>Notice that the divs are vertical (they are default block), spans are horizontal which means they are default inline.<br>
+        <div class="dd" id="fd">First div (display: inline)</div>
+        <div class="dd">Second div (has no display prop)</div>
+        <div class="dd">Third div (has no display prop)</div>
+        <span class="sd" id="fs">First span (display: block)</span>
+        <span class="sd">Second span (has no display prop)</span>
+        <span class="sd">Third span (has no display prop)</span>
+        <br>Note height doesn't work with inline (also doesn't support padding top, margin top, etc no vertical height props),
+        so we can use inline-block which essentially makes them blocks but puts them in line and 
+        makes vertical props possible:
+        <br>
+        <div class="dib">First div</div>
+        <div class="dib">Second div</div>
+        <div class="dib">Third div</div>
+    </p>
+    <p>
+        <h1>CSS Units</h1>
+        Several different units for expressing a length. Length is a number followed length unit.
+        Two major length units: absolute and relative.
+        <h3>Absolute length</h3> 
+        These units are fixed and a length in that size will always be that size<br>
+        e.g. cm, mm, px, etc
+        <h3>Relative Length</h3>
+        These units are relative to another length property. These scale better between different rendering mediums (depends on screen size) and should be preferred over absolutes<br>
+        e.g. em, ex, %, etc
+        <br>
+        <div class="apu">This is a normal 50px div</div>
+        Resizing the page will make the font-size appear smaller, but the width of the div will always be 50px<br>
+        <div class="rpu-vh">This will take up 10% relative to the viewport height (10%*vh)</div>"
+        <div class="rpu-vw">This will take up 10% relative to the viewport width (10%*vw)</div>"
+        <div class="rpu-p-em">This is the parent div for the em with font-size 10px
+            <div class="rpu-em">This will take up 10units relative to the size of the font (10em*10pxparent's font-size = 100px)</div>"
+        </div>
+        <b>Note: </b> if you use em for things other than the font-size (e.g. width) that will use the font-size as a calculation to determine pixels for that other property.
+        <div class="rpu-rem">This will take up 10units relative to the font size of the document's root element (html tag) (10rem*16root element's font-size = 160px)</div>"
+    </p>
+</body>
+</html>

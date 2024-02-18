@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+    <link rel="stylesheet" type="text/css" href="../../prism.css"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="../../prism.js"></script>
+    <title>Week 1.4 - CSS Design</title>
+</head>
+<body>
+    <div class="nav-space"></div>
+    <p>
+        <h1>CSS Color</h1>
+        Many ways to specify colors. There are colored named, RGB, HEX, HSL, RGBA, HSLA values.<br>
+        <p id="cn-eg">This is an example of CSS with colored named (color: red) </p>
+        <p id="cRGB-eg">This is an example of CSS with RGB as color: rgb(81, 115, 122) </p>
+        <p id="cHSL-eg">This is an example of CSS with HSL (hue, saturation-color amount%, lightness-shadow vs light%) as color: hsl(120, 67%, 53%) </p>
+        <p id="cRGBA-eg">This is an example of CSS with RGBA (RGBA and opacity) as color: rgba(120, 250, 13, 5) </p>
+        <p id="cHSLA-eg">This is an example of CSS with HSLA (HSL and opacity) as color: hsla(120, 67%, 53%, 50%) </p>
+    </p>
+    <p>
+        <h1>Background Colors</h1>
+        Background-color property sets background color of an element. Background of an element is the total size
+         of the element, including padding and border (but not the margin).
+        <p id="bg-eg">
+            This is a paragraph. Border is in black. Background is yellow.
+        </p>
+    </p>
+    <p>
+        <h1>CSS Box Model</h1>
+        <img src="content/CSS-Box-Model.avif" id="bm-img" alt="CSS box model" /><br>
+        The box model is what's used to describe how elements are laid out on a web page.<br>
+        The middle is the actual content of the element. After that is the padding, it determines the space between the content and the border.<br>
+        After that is the border, which is the outer most part of the elemnt.<br>
+        Outside the border, we have the margin. The margin is the space between the element's border and any other element; can space out elements.<br>
+        <div id="elem-1">
+            This is the first element:<br>
+
+            <b>Border</b><br>
+            border-color: black;<br>
+            border-style: solid;<br>
+            border-width: 0.2em;<br>
+
+            <b>Padding</b><br>
+            padding-left: 10em;<br>
+        </div>
+        <div id="elem-2">
+            This is the second element<br>
+
+            <b>Border</b><br>
+            border: 0.2em dotted black;<br>
+
+            <b>Padding</b><br>
+            padding-right: 10em;<br>
+            padding-top:2em;<br>
+        </div>
+        <div id="elem-3">
+            This is the third element<br>
+
+            <b>Border</b><br>
+            border: 0.2em solid black;<br>
+
+            <b>Padding (top right bottom left)</b><br>
+            padding: 10px 50px 100px 15p;<br>
+
+            <b>Margin</b><br>
+            margin-top: 1.1em;<br>
+        </div>
+    </p>
+    <p>
+        <h1>CSS Box Sizing</h1>
+        Allows you to control how the width and height of an element are calculated by 
+        including the padding and border into the element's total width and height calculations.<br>
+        The default value of box-sizing is content value which means element's w/h calculated only based on content of element<br>
+        This can cause layout issues if you add padding or border to the element as it increases size of the element.<br>
+        <br>
+        If you use border box values, the padding and border get included. E.g. if element w is 100px, padding 10px and border 1px. Total width remains 100px.<br>
+        Bottom is an example of nested divs. The inner one ends up going outside the inner div.
+        <br>
+        <div class="bs-parent">
+            <div id="bs-1">
+               This is the first element: 
+               1px solid black;
+               width: 100%;
+               padding: 50px;
+               margin: 20px;
+            </div>
+        </div>
+        
+        <br><br>
+        The reason why this goes out is because the parent box is 450px width. The child div is also 450px and with padding and border its 552px. In addition the margin of 20px further pushed it out. 
+        However, the actual content spans more than what is actually says causing it to go over.
+        <img src="content/oobs.JPG" alt="Out of bounds"/>
+        <br>
+        But with <b>box-sizing: border-box</b> border-box property this gets fixes. <b>Notice: </b> that the text can still go outside of it's element's border.
+        <br><b>box-sizing: content-box</b> Will go back to what we were going through before. 
+        <br>Essentially, border-box will keep inner boxes withi the border of it's parent box.
+        <div class="bs-parent">
+            <div id="bs-2">
+                This is the second element: 
+                border: 1px solid black;
+                padding: 50px;
+                margin: 20px;
+                box-sizing: border-box
+            </div>
+        </div>
+    </p>
+    <p>
+        <h1>CSS Styling Table</h1>
+        We can create tables using table, tr, td, th, etc.
+        <br>We can also style these tables like border, size, alignments, etc. We can also style rows, make table responsive, etc.
+        <table class="nc">
+            <thead class="nc">
+                <th class="nc">
+                    First Name
+                </th>
+                <th class="nc">
+                    Last Name
+                </th>
+            </thead>
+            <tbody class="nc">
+                <tr class="nc">
+                    <td class="nc">Mirko</td>
+                    <td class="nc">Cro Cop</td>
+                </tr>
+                <tr class="nc">
+                    <td class="nc">Wanderlei</td>
+                    <td class="nc">Silva</td>
+                </tr>
+            </tbody>
+        </table> 
+        <b>Note: </b> the table has a border (table th, td {border: 1px solid black;}). However, there's space, if you inspect element that is not part of the margin. To fix this use <b>border-collapse: collapse;</b><br>
+        <b>Note: </b> also that the content text is not aligned, we can fix this with <b>text-align: center;</b>
+        <br>We can also change the color of the header.
+        <table class="tb-bc">
+            <thead class="tb-bc" id="th">
+                <th class="tb-bc">
+                    First Name
+                </th>
+                <th class="tb-bc">
+                    Last Name
+                </th>
+            </thead>
+            <tbody class="tb-bc">
+                <tr class="tb-bc">
+                    <td class="tb-bc">Mirko</td>
+                    <td class="tb-bc">Cro Cop</td>
+                </tr>
+                <tr class="tb-bc">
+                    <td class="tb-bc">Wanderlei</td>
+                    <td class="tb-bc">Silva</td>
+                </tr>
+            </tbody>
+        </table> 
+        We can also add alternating patterns programatically. Say we want to alternate gray and white.<br>
+        For that we can use nth-child: .tb-tr:nth-child(2n+1) {background-color: rgb()}.<br>
+        We can also add pseudo-class selector to highlight the cell we are currently on
+        <table class="tb-bc">
+            <thead class="tb-bc" id="th">
+                <th class="tb-bc">
+                    First Name
+                </th>
+                <th class="tb-bc">
+                    Last Name
+                </th>
+            </thead>
+            <tbody class="tb-bod">
+                <tr class="tb-tr">
+                    <td class="tb-bc-2">Mirko</td>
+                    <td class="tb-bc-2">Cro Cop</td>
+                </tr>
+                <tr class="tb-tr">
+                    <td class="tb-bc-2">Wanderlei</td>
+                    <td class="tb-bc-2">Silva</td>
+                </tr>
+                <tr class="tb-tr">
+                    <td class="tb-bc-2">Mirko</td>
+                    <td class="tb-bc-2">Cro Cop</td>
+                </tr>
+                <tr class="tb-tr">
+                    <td class="tb-bc-2">Wanderlei</td>
+                    <td class="tb-bc-2">Silva</td>
+                </tr>
+                <tr class="tb-tr">
+                    <td class="tb-bc-2">Mirko</td>
+                    <td class="tb-bc-2">Cro Cop</td>
+                </tr>
+                <tr class="tb-tr">
+                    <td class="tb-bc-2">Wanderlei</td>
+                    <td class="tb-bc-2">Silva</td>
+                </tr>
+                <tr class="tb-tr">
+                    <td class="tb-bc-2">Mirko</td>
+                    <td class="tb-bc-2">Cro Cop</td>
+                </tr>
+                <tr class="tb-tr">
+                    <td class="tb-bc-2">Wanderlei</td>
+                    <td class="tb-bc-2">Silva</td>
+                </tr>
+                <tr class="tb-tr">
+                    <td class="tb-bc-2">Mirko</td>
+                    <td class="tb-bc-2">Cro Cop</td>
+                </tr>
+                <tr class="tb-tr">
+                    <td class="tb-bc-2">Wanderlei</td>
+                    <td class="tb-bc-2">Silva</td>
+                </tr>
+                <tr class="tb-tr">
+                    <td class="tb-bc-2">Mirko</td>
+                    <td class="tb-bc-2">Cro Cop</td>
+                </tr>
+                <tr class="tb-tr">
+                    <td class="tb-bc-2">Wanderlei</td>
+                    <td class="tb-bc-2">Silva</td>
+                </tr>
+            </tbody>
+        </table> 
+    </p>
+    <p>
+        <h1>CSS Icons</h1>
+        No default way of putting CSS icons into HTML. Instead, we can use 3rd party libraries like font awesome, boostrap icons, Google icons, W3 icons, etc.<br>
+        We can add the name of the specified icon class to any inline html element like &lti&gt or &ltspan*gt.<br>
+        Most icons should be scalable vectors that are customized with CSS.<br>
+        For this example we will use <a href="https://www.w3schools.com/w3css/w3css_icons.asp" alt="icons">w3 css icons</a><br>
+        To use them create a new link in the &lt head &gt tag like so: 
+        <pre>
+            <code class="language-html line-numbers">
+                &lt;link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"&gt;
+                &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;
+            </code>
+        </pre>
+        Create a home icon: <i class="fa fa-home"></i>
+        <pre>
+            <code class="language-html">
+                &lti class="fa fa-home"&gt;&lt/i&gt;    &lt;!-- Note the icon is created by specifying class name--&gt;
+            </code>
+            <code class="language-css">
+                i {
+                    font-size: 50px !important; /* Important makes this property take precendence over current class size */
+                    color: blue;
+                }
+            </code>
+        </pre>
+    </p>
+    <p>
+        <h1>CSS Display Grid</h1>
+        2-D layout that allows you to create complex layouts using rows and columns. Specifically designed for grids.<br>
+        With rows and columns, you have control over positioning and sizing of each element.
+        <img src="./content/dgrid.JPG" alt="grid"></a>
+        <div class="grid-container">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9. This won't overflow. blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah </div>
+            <div class="grid-item">10</div>
+        </div>
+        The code for the above grid:
+        <pre>
+            <code class="language-html">
+                &lt;div class="grid-container"&gt;
+                    &lt;div class="grid-item"&gt;1&lt;/div&gt;
+                    &lt;div class="grid-item"&gt;2&lt;/div&gt;
+                    &lt;div class="grid-item"&gt;3&lt;/div&gt;
+                    &lt;div class="grid-item"&gt;4&lt;/div&gt;
+                    &lt;div class="grid-item"&gt;5&lt;/div&gt;
+                    &lt;div class="grid-item"&gt;6&lt;/div&gt;
+                    &lt;div class="grid-item"&gt;7&lt;/div&gt;
+                    &lt;div class="grid-item"&gt;8&lt;/div&gt;
+                    &lt;div class="grid-item"&gt;9. This won't overflow. blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah &lt;/div&gt;
+                    &lt;div class="grid-item"&gt;10&lt;/div&gt;
+                &lt;/div&gt;
+            </code>
+            <code class="language-css">
+                .grid-container {
+                    background-color:rgb(61, 225, 225);
+                    padding: 10px;
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);    /* You are specifying how many columns you want and their size; 1fr will take the whole row, so specifying multiple will make sure all cols together take the whole row. */
+                    grid-auto-rows: minmax (80px, auto); /* makes default size 80 px */
+                    grid-template-rows: 200px 200px;    /* This specifies it only for the first and second row */
+                    column-gap: 10px;
+                    row-gap: 10px;
+                }
+                
+                .grid-item {
+                    background-color: whitesmoke;
+                    border: 1px solid rgba(0, 0, 0, 0.8);
+                    padding: 20px;
+                    font-size: 30px;
+                    text-align: center;
+                }
+            </code>
+        </pre>
+        First use <b>display: grid</b>, to tell that we are using a grid layout, but just doing this doesn't change anything.<br> You have to include the following:<br><br>
+        You can specify the number of columns you want to separate the grid with <b>grid-template-columns</b> and you specify the width of each column you want to create. 
+        You can make this easier by using <b>repeat(# of cols, each size)</b>. Also note we use <b>1fr</b>, which means that each row will take up the whole row. If you have 2fr and 1fr. The first row will be twice as big as the second row, but altogether will only take up the whole row.
+        Same things can be done for <b>grid-template-rows</b> to specify the number and height of the rows.<br><br>
+        <Br>You can specify the automatic row size with <B>grid-auto-rows</B>, if you have this property the text can overflow. To fix this you can use <b>minmax(min size, auto)</b>, so that all rows will be default min size but can become larger to fit all of the text.<br>
+        <br>You can create gaps between columns and rows with <b>column/row-gap</b>.<br><br>
+        <h2>Part 2 of grids</h2>
+        <h3>Specifying size with grid-template-areas:</h3>
+        <div class="grid-container1">
+            <div class="grid-item1 item-1">1</div>
+            <div class="grid-item1 item-2">2</div>
+            <div class="grid-item1 item-3">3</div>
+            <div class="grid-item1">4</div>
+            <div class="grid-item1">5</div>
+            <div class="grid-item1">6</div>
+            <div class="grid-item1">7</div>
+            <div class="grid-item1">8</div>
+            <div class="grid-item1">9</div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="grid-container1"&gt;
+                    &lt;div class="grid-item1 item-1"&gt;1&lt;/div&gt;
+                    &lt;div class="grid-item1 item-2"&gt;2&lt;/div&gt;
+                    &lt;div class="grid-item1 item-3"&gt;3&lt;/div&gt;
+                    &lt;div class="grid-item1"&gt;4&lt;/div&gt;
+                    &lt;div class="grid-item1"&gt;5&lt;/div&gt;
+                    &lt;div class="grid-item1"&gt;6&lt;/div&gt;
+                    &lt;div class="grid-item1"&gt;7&lt;/div&gt;
+                    &lt;div class="grid-item1"&gt;8&lt;/div&gt;
+                    &lt;div class="grid-item1"&gt;9&lt;/div&gt;
+                &lt;/div&gt;
+            </code>
+            <code class="language-css">
+                .grid-container1 {
+                    background-color:rgb(183, 209, 51);
+                    padding: 10px;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);    /* You are specifying how many columns you want and their size; 1fr will take the whole row, so specifying multiple will make sure all cols together take the whole row. */
+                    grid-auto-rows: minmax(80px, auto); /* makes default size 80 px */
+                    row-gap: 5px;
+                    column-gap: 5px;
+                    grid-template-areas: 
+                    "header header header"    /* header takes up 3 columns*/
+                    "sidebar content content"
+                    "sidebar content content"
+                }
+                
+                .grid-item1 {
+                    background-color: rgb(234, 117, 117);
+                    border: 1px solid rgba(0, 0, 0, 0.8);
+                    padding: 20px;
+                    font-size: 30px;
+                    text-align: center;
+                }
+                
+                .item-1 {
+                    grid-area: header;
+                }
+                
+                .item-2 {
+                    grid-area: sidebar;
+                }
+                .item-3 {
+                    grid-area: content;
+                }
+            </code>
+        </pre>
+        Specifying <b>grid-template-areas </b> allows you to specify what should be headers and contents.<br>
+        These map out to current items that have matching <b>grid-area </b> properties.<br><br>
+        In this example <b>.item-1 </b> is a <b>header </b>, and header is marked to take 3 cols.<br>
+        <b>.item-2 </b> is a sidebar and it takes one column and two rows.<br>
+        <b>.item-3 </b> is content and it takes 2 cols and 2 rows.<br><br>
+
+        <h3>Grid-column and Grid-row start end indexes for sizing</h3>
+        <div class="grid-container2">
+            <div class="grid-item2 item-1-2">1</div>
+            <div class="grid-item2 item-2-2">2</div>
+            <div class="grid-item2 item-3-2">3</div>
+            <div class="grid-item2">4</div>
+            <div class="grid-item2">5</div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="grid-container2"&gt;
+                    &lt;div class="grid-item2 item-1-2"&gt;1&lt;/div&gt;
+                    &lt;div class="grid-item2 item-2-2"&gt;2&lt;/div&gt;
+                    &lt;div class="grid-item2 item-3-2"&gt;3&lt;/div&gt;
+                    &lt;div class="grid-item2"&gt;4&lt;/div&gt;
+                    &lt;div class="grid-item2"&gt;5&lt;/div&gt;
+                &lt;/div&gt;
+            </code>
+            <code class="language-css">
+                .grid-container2 {
+                    background-color:rgb(51, 122, 209);
+                    padding: 10px;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);    /* You are specifying how many columns you want and their size; 1fr will take the whole row, so specifying multiple will make sure all cols together take the whole row. */
+                    grid-auto-rows: minmax(80px, auto); /* makes default size 80 px */
+                    row-gap: 5px;
+                    column-gap: 5px;
+                }
+                
+                .grid-item2 {
+                    background-color: rgb(155, 16, 255);
+                    border: 1px solid rgba(0, 0, 0, 0.8);
+                    padding: 20px;
+                    font-size: 30px;
+                    text-align: center;
+                }
+                
+                .item-1-2 {
+                    grid-column-start: 1;   /*These are counting the spaces in the column*/
+                    /*grid-column-end: 3;     /*This ends before the third column*/
+                    grid-column-end:-1;     /* this will make it span the entire row also: 4 in this case will work */
+                     /* grid-column: 1 / -1;  Another method of specfiying the start and end columns (same for row)*/
+                }
+                
+                .item-2-2 {
+                    grid-column: span 2;    /* Instead of specifying start and end you can just specify how many columns it should take up */
+                    grid-row: 1 / 3;
+                }
+                
+                .item-3-2 {
+                    /* grid-column: span 1; As this is a grid you don't need to specify this */
+                    grid-row: 1 / 3;
+                }
+            </code>
+        </pre>
+        In this case we are specifying the number of cols and rows based on start and end values.<br>
+        These values are <b>NOT</b> the columns themselves but the spacing inbetween the columns. [space 1](col 1)[space 2](col 2 )[space 3].
+        <br>In this example item one is specified to start at space 1 and go to the end (-1 or 4). <b>NOTE: </b> -1 as an index means the last index.<br>
+        <br>Similar thing can be done for the rows. As we see here, items 2 and 3 are specified to start at row space 1 and finish at row space 3 which is why it appears above 1.<br>
+        <h4>Sizing conventions</h4>
+        <ul>
+            <li><b>grid-column/row-start:</b>start space index; <b>and</b> <b>grid-column/row-end:</b> end space index;<br> Specify the start and end space indexes that the item should span.</li>
+            <li><b>grid-column/row:</b>start space idx / end space id;<br> Shorthand to specify the start and end space indexes that the item should span.</li>
+            <li><b>grid-column/row:</b>span #col/row;<br>Specify the number of rows or cols that item should span</li>
+        </ul>
+
+        <h2>Justifying and Aligning Content</h2>
+        <div class="grid-container3">
+            <div class="grid-item3">1</div>
+            <div class="grid-item3">2</div>
+            <div class="grid-item3">3</div>
+            <div class="grid-item3">4</div>
+            <div class="grid-item3">5</div>
+            <div class="grid-item3">6</div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="grid-container3"&gt;
+                    &lt;div class="grid-item3"&gt;1&lt;/div&gt;
+                    &lt;div class="grid-item3"&gt;2&lt;/div&gt;
+                    &lt;div class="grid-item3"&gt;3&lt;/div&gt;
+                    &lt;div class="grid-item3"&gt;4&lt;/div&gt;
+                    &lt;div class="grid-item3"&gt;5&lt;/div&gt;
+                    &lt;div class="grid-item3"&gt;6&lt;/div&gt;
+                &lt;/div&gt;
+            </code>
+            <code class="language-css">
+                .grid-container3 {
+                    background-color:rgb(236, 14, 107);
+                    padding: 10px;
+                    display: grid;
+                    grid-template-columns: repeat(3, 100px);    /* You are specifying how many columns you want and their size; 1fr will take the whole row, so specifying multiple will make sure all cols together take the whole row. */
+                    grid-auto-rows: 100px;
+                    row-gap: 5px;
+                    column-gap: 5px;
+                    height: 100vh;
+                    /* justify-content: center; centers all items horizontally */
+                    /* justify-content: space-around; creates space around */
+                    justify-content: end; /* creates space around - same properties can be added for align-content*/
+                    align-content: center;  /* centers all items vertically */
+                }
+                
+                .grid-item3 {
+                    background-color: rgb(16, 255, 207);
+                    border: 1px solid rgba(0, 0, 0, 0.8);
+                    padding: 20px;
+                    font-size: 30px;
+                    text-align: center;
+                }
+            </code>
+        </pre>
+        Justfiying content related to content with respect to the horizontal axis, and aligning content relates to aligning content with respect to the vertical axis.<br>
+        You can apply most of the same properties to either justify or align. Can't use multiple values at same time.<br>
+        <b>justify/align-content: center</b><br>This specified centering the content horizontally/vertically<br>
+        <br><b>justify/align-content: space-around</b><br>This adds space around each of the contents (like margin).<br>
+        <br><b>justify/align-content: start or end</b><br>Whether items should be located at (e.g. end for justify means content will go till the end of the container.)<br>
+    </p>
+    <p>
+        <h1 id="nav-bar-tut">CSS Navigation Bar</h1>
+        Helps user to navigate between different pages/sections of the site. Usually a horizontally bar with different links in the site.<br>
+        <ul class="nav-bar-eg">
+            <li class="nav-bar-li-eg"><a class="nav-active" href="#">Home</a></li> <!--Need to use anchor tag for links-->
+            <li class="nav-bar-li-eg"><a href="#">News</a></li>
+            <li class="nav-bar-li-eg"><a href="#">Contact</a></li>
+            <li class="nav-bar-li-eg"><a href="#nav-bar-tut">Click here to learn about nav bars</a></li>
+        </ul>
+        <pre> 
+            <code class="language-html">
+                &lt;ul class="nav-bar-eg"&gt;
+                    &lt;li class="nav-bar-li-eg"&gt;&lt;a class="nav-active" href="#"&gt;Home&lt;/a&gt;&lt;/li&gt; &lt;!--Need to use anchor tag for links--&gt;
+                    &lt;li class="nav-bar-li-eg"&gt;&lt;a href="#"&gt;News&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-bar-li-eg"&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class="nav-bar-li-eg"&gt;&lt;a href="#nav-bar-tut"&gt;Click here to learn about nav bars&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            </code> 
+        </pre>          
+        We use unordered list to create the nav bar with anchor tags containing the actual content and links to reference.
+        <pre>
+            <code class="language-css">
+                .nav-bar-eg {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    overflow: hidden;
+                    background-color: black;
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                    z-index: 1;
+                }
+                
+                .nav-bar-li-eg {
+                    float: left; /* Causes elements to appear side by side to the left (left to right), right will make it (right to left in order)*/
+                }
+                
+                .nav-bar-li-eg a{
+                    display: block;
+                    color: white;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                }
+                
+                /* For the link that is active */
+                .nav-active {
+                    background-color:aqua;
+                    color: black !important;
+                }
+                
+                /* pseudo-class selector */
+                .nav-bar-li-eg a:hover {
+                    background-color: aquamarine;
+                    color: gray !important;
+                }
+                
+                .nav-rand {
+                    height: 100px;
+                    background-color: orange;
+                }
+                
+                /* Add space to first element so nav doesn't hide it */
+                .nav-space {
+                    margin-top: 70px;
+                }
+            </code>
+        </pre>
+        We get rid of the bullet list style with <b>list-style-type: none;</b>. We then mark the position as fixed so that it stays visible in the viewport (stays when we scroll).<br>
+        We then mark it to be at the top with <b>top:0;</b>, and we want all the items so we use <b>width:100%</b>.<br>
+        To get all the items to appear from left to right we use <b>float: left</b>, which also stops the items from being listed top to bottom.<br>
+        After that we are basically just centering the content and adding padding to make it look nice and adding pseudo-class selector to change color when we hover.
+        Note: we also give the navbar property z-index: 1 to make sure it will be above all the other elements;
+    </p>
+    <p>
+        <h1>Dropdown Menu</h1>
+        A menu that appears when clicking a button or hovering over an area and lists different selectable options.<br>
+        <div class="dd-eg">
+            <!-- Drop down is just a button -->
+            <button class="dd-btn">Dropdown</button>
+            <!-- Drop down links to different elements -->
+            <div class="dd-cnt">
+                <a href="#">First Item</a>
+                <a href="#">Second Item</a>
+                <a href="#">Third Item</a>
+            </div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="dd-eg"&gt;
+                    &lt;!-- Drop down is just a button --&gt;
+                    &lt;button class="dd-btn"&gt;Dropdown&lt;/button&gt;
+                    &lt;!-- Drop down links to different elements --&gt;
+                    &lt;div class="dd-cnt"&gt;
+                        &lt;a href="#"&gt;First Item&lt;/a&gt;
+                        &lt;a href="#"&gt;Second Item&lt;/a&gt;
+                        &lt;a href="#"&gt;Third Item&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            </code>
+        </pre>
+        Right now the "dropdown" is really just a button, which upon being hovered, shows content that is hidden when it's not being hovered on.
+        <pre>
+            <code class="language-css">
+                .dd-eg {
+                    position: relative;
+                    display: inline-block;
+                }
+                
+                .dd-cnt {
+                    display: none; /* Default don't display */
+                    position: absolute;
+                    z-index: 1; /*which element gets put to the top higher number more on top*/
+                    left: 25px; /* add space to the left to line it up with drop down;*/
+                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                    width: 100px;
+                }
+                
+                .dd-eg:hover .dd-cnt{
+                    display: block;
+                }
+                
+                /* Pushed content down to make room for the dropdown selection options */
+                .dd-eg:hover {
+                    margin-bottom: 70px;
+                }
+                
+                .dd-btn {
+                    border: none;
+                    padding: 20px;
+                    border-radius:50px;
+                }
+            </code>
+        </pre>
+        Make the actual content default to being <b>display: none</b> (invisible), make the <b>z-index: 1</b>, meaning that it will show up as the second item on top.
+    </p>
+    <p>
+        <h1>CSS Image Gallery and Sprites</h1>
+        <h2>Image Gallery</h2>
+        Image gallery is a collection of images in a grid or a row.
+        <div class="img-gall">
+            <div class="img-eg"><img class="gal-imgs" src="./content/b1.jpg"/></div>
+            <div class="img-eg"><img class="gal-imgs" src="./content/b2.jpg"/></div>
+            <div class="img-eg"><img class="gal-imgs" src="./content/b3.webp"/></div>
+            <div class="img-eg"><img class="gal-imgs" src="./content/b4.webp"/></div>
+            <div class="img-eg"><img class="gal-imgs" src="./content/b5.webp"/></div>
+            <div class="img-eg"><img class="gal-imgs" src="./content/b6.jpg"/></div>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="img-gall"&gt;
+                    &lt;div&gt;&lt;img class="gal-imgs" src="./content/b1.jpg"/&gt;&lt;/div&gt;
+                    &lt;div&gt;&lt;img class="gal-imgs" src="./content/b2.jpg"/&gt;&lt;/div&gt;
+                    &lt;div&gt;&lt;img class="gal-imgs" src="./content/b3.webp"/&gt;&lt;/div&gt;
+                    &lt;div&gt;&lt;img class="gal-imgs" src="./content/b4.webp"/&gt;&lt;/div&gt;
+                    &lt;div&gt;&lt;img class="gal-imgs" src="./content/b5.webp"/&gt;&lt;/div&gt;
+                    &lt;div&gt;&lt;img class="gal-imgs" src="./content/b6.jpg"/&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            </code>
+        </pre>
+        Creating a list of images and displaying them in a grid layout.
+        <pre>
+            <code class="language-css">
+                .img-gall {
+                    display: grid; /* Displayed as a grid */
+                    grid-template-columns: repeat(3,1fr);   /*3 column grid*/
+                    grid-row: auto;
+                    gap: 10px; /* Row col spacing is 10px */
+                }
+                
+                .gal-imgs {
+                    max-width: 100%; /* Make sure the image doesn't exceed the container */
+                }
+            </code>
+        </pre>
+        First make the overall container to <b>display: grid</b>, and specify that we have 3 rows (<b>grid-template-columns: repeat(3, 1fr);</b>).<br>
+        Make sure to target each image tag and make their <b>width</b> and <b>max-width</b> both be 100% so they take the entire container and don't exceed it.
+        <br><br>
+        <h2>Sprites</h2>
+        Sprites combine multiple images in a single image and use CSS to display only required portion of the image. Helps to reduce number of http reqs needed.<br>
+        Combining images to a single image are done through a editing tool.<br>
+        <div class="sprite-cnt sp-eg1"></div>
+        <div class="sprite-cnt sp-eg2"></div>
+        <div class="sprite-cnt sp-eg3"></div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="sprite-cnt sp-eg1"&gt;&lt;/div&gt;
+                &lt;div class="sprite-cnt sp-eg2"&gt;&lt;/div&gt;
+                &lt;div class="sprite-cnt sp-eg3"&gt;&lt;/div&gt;
+            </code>
+        </pre>
+        Tags to hold can really be most things a, img, div tag I believe.
+        <pre>
+            <code class="language-css">
+                .sp-eg1 {
+                    width: 300px;
+                    height: 300px;
+                    background: url(./content/spritesheet.png) no-repeat;
+                    background-position: -800px -300px; /* Specify where in the you want to start (left, top)*/
+                    display: inline-block;
+                }
+                .sp-eg2 {
+                    width: 300px;
+                    height: 300px;
+                    background: url(./content/spritesheet.png) no-repeat;
+                    background-position: -1600px -200px; /* Negative positon*/
+                    display: inline-block;
+                }
+                .sp-eg3 {
+                    width: 300px;
+                    height: 300px;
+                    background: url(./content/spritesheet.png) no-repeat;
+                    background-position: -5550px -380px;
+                    display: inline-block;
+                }
+            </code>
+        </pre>
+        In the css, you specify the sprite by calling <b>background: url("sprite url")</b>. Note it is possible to have the image be loaded "once: within the css in a parent container, and then for the children you can
+        just specify the position <b>background-position: (-px from left) (-px from top)</b>. These images will tile if your specified width/height is too big, so you can use no-repeat to prevent this.
+    </p>
+    <p>
+        <h1>Image Styling</h1>
+        Applying styles to imaging. E.g. border, shawdow, filters, etc.<br>
+        <img id="b7" src="./content/b7.webp" width="50%" height="auto"/>
+        <pre>
+            <code class="language-html">
+                &lt;img id="b7" src="./content/b7.webp" width="50%" height="auto"/&gt;
+            </code>
+            <code class="language-css">
+                #b7 {
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: block;         /* Marking margin left/right auto AND display block move the image to the middle*/
+                    border: 2px solid black;
+                    border-radius: 50%;
+                    box-shadow: 5px 4px 1px 3px rgba(0, 0, 0, 0.2); /* horizontal offset, vert offset, blur (more blurrier), spread radius (increases shadows radius), color */
+                    filter: blur(4px) brightness(150%) contrast(180%);
+                }
+            </code>
+        </pre>
+        Display is block by block, and they we specify margin left and right to be auto which pushes the image to the center of the page.
+        <br>We created a border and made it circular by giving it a border-radius.<br>
+        We added a shadow to the box as well and we applied a blur, brightness, and contrast filter. Many other filters out there.
+        
+        <h1>Image Reflection</h1>
+        Not supported on firefox.<br>
+        <img id="b7-ref" src="./content/b7.webp" width="50%" height="auto"/>
+        <pre>
+            <code class="language-css">
+                #b7-ref{
+                    -webkit-box-reflect: right;
+                }
+            </code>
+        </pre>
+        Using webkit-box-reflect you can choose to reflect the base image to side you want.<br>
+    </p>
+    <p>
+        <h1>Forms</h1>
+        <div class="form-div">
+            <form>
+                <label for="form-fname">First Name</label>
+                <input type="text" id="form-fname" placeholder="First Name...">
+                <br>
+
+                <label for="form-lname">Last Name</label>
+                <input type="text" id="form-lname" placeholder="Last Name...">
+                <Br>
+
+                <label for="form-country">Country</label>
+                <select id="form-country">
+                    <option value="aus">Australia</option>
+                    <option value="mad">Madagascar</option>
+                    <option value="nic">Nicaragua</option>
+                </select>
+
+                <input type="submit" value="Submit"/>
+            </form>
+        </div>
+        <pre>
+            <code class="language-html:">
+                &lt;div class="form-div"&gt;
+                    &lt;form&gt;
+                        &lt;label for="form-fname"&gt;First Name&lt;/label&gt;
+                        &lt;input type="text" id="form-fname" placeholder="First Name..."&gt;
+                        &lt;br&gt;
+        
+                        &lt;label for="form-lname"&gt;Last Name&lt;/label&gt;
+                        &lt;input type="text" id="form-lname" placeholder="Last Name..."&gt;
+                        &lt;Br&gt;
+        
+                        &lt;label for="form-country"&gt;Country&lt;/label&gt;
+                        &lt;select id="form-country"&gt;
+                            &lt;option value="aus"&gt;Australia&lt;/option&gt;
+                            &lt;option value="mad"&gt;Madagascar&lt;/option&gt;
+                            &lt;option value="nic"&gt;Nicaragua&lt;/option&gt;
+                        &lt;/select&gt;
+        
+                        &lt;input type="submit" value="Submit"/&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+            </code>
+        </pre>
+        We use the <b>form tag</b> to collect user input through the <b>input tag</b>. By convention, we use a <b>label tag</b> and a for that maps to the input elements id to specify the name for the input.<br>
+        We then create a dropdown using the <b>selec tag</b> and we create selectable options using the <b>option tag</b>.<Br>
+        We then finally create a submit buttom by creating an input tag with <b>type="submit"</b>.
+        <pre>
+            <code class="language-css">
+                input[type=text] , select {
+                    width: 100px;
+                    padding: 12px 20px;
+                    margin: 8px 0;
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                }
+                
+                input[type=submit] {
+                    width: 100%;
+                    background-color: green;
+                    color: white;
+                    padding: 14px 20px;
+                    margin: 8px 0;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+                
+                input[type=submit]:hover {
+                    background-color: gray;
+                }
+                
+                .form-div {
+                    border-radius: 5px;
+                    background-color: whitesmoke;
+                    padding: 20px;
+                }
+            </code>
+        </pre>
+        In this exacle we use attribute selectors to sepecify elements based on their input type. We also add a pseudo-class selector to change the color when you hover over the submit button. Rest is just nice css.
+    </p>
+    <p>
+        <h1>Text Effects</h1>
+        CSS Text consists of all properties used to add styles to text in our html page. E.g space, shodw, align , decorate, transofrm etc.
+        <div class="te-eg">
+            <h2>Text Effects Examples</h2>
+            <p>Example text blah blah blah blah blahhhababybyb bablah blah. Blah? Blah blah blah! Blah blahbababy Blahb blah blah!! Going over asklhdlajkshdlk a hsdlkhaslk dhalksdh alkshdlkahs dlkashd lkahsdlkahslkdha lskdhaosihdiqwho hdalskhdalkh sladh as.</p>
+        </div>
+        <pre>
+            <code class="language-html">
+                &lt;div class="te-eg"&gt;
+                    &lt;h2&gt;Text Effects Examples&lt;/h2&gt;
+                    &lt;p&gt;Example text blah blah blah blah blahhhababybyb bablah blah. Blah? Blah blah blah! Blah blahbababy Blahb blah blah!! Going over asklhdlajkshdlk a hsdlkhaslk dhalksdh alkshdlkahs dlkashd lkahsdlkahslkdha lskdhaosihdiqwho hdalskhdalkh sladh as.&lt;/p&gt;
+                &lt;/div&gt;
+            </code>
+        </pre>
+        <pre>
+            <code class="language-css">
+                .te-eg {
+                    background-color: aquamarine;
+                    padding: 20px;
+                    text-align: right;  /* justify will make the alignement for the left and right the same.*/
+                    text-decoration: overline;  /* underline, strikethrough are some others*/
+                    text-transform: uppercase; /*capitalize- makes first letter of all words capp, lowercase, uppercase (all upper), etc*/
+                    word-spacing: 10px; /*spacing between words, can be negative as well */
+                    letter-spacing: 5px; /* spacing between letters*/
+                    line-height: 25px;  /* spaces between two text lines */
+                    text-shadow: 20px 2px 3px rgb(51, 122, 209); /* Horizontal offset, vertical offset, blur radius, color */
+                }
+            </code>
+        </pre> 
+    </p>
+    <p>
+        <h1>Object Fit and Position</h1>
+        Object fit and position are used to position an image/video inside an html element.<br>
+        Object fit specifies how img/video tags should be resized to fit its container. This porperty tells content to fill the container in different ways e.g.l preserve aspect ration, etc.
+        <br>Object position specifies how img/video tags should be positioned within its container.<br>
+
+        <h2>object-fit: fill</h2>
+        <div class="cont-ofp">
+            <img src="./content/b8.webp" id="ofp1"/>
+        </div>
+        Gray box is 200x200 px note how it takes up the entire space and the aspect ratio is messed up (letterboxed).
+        
+        <h2>object-fit: contain</h2>
+        <div class="cont-ofp">
+            <img src="./content/b8.webp" id="ofp2"/>
+        </div>
+        Gray box is still 200x200 note how it makes the image smaller to make the aspect ratio correct.
+        
+        <h2>object-fit: cover</h2>
+        <div class="cont-ofp">
+            <img src="./content/b8.webp" id="ofp3"/>
+        </div>
+        Gray box is still 200x200, cover sizes image to amintain aspect ratio and fills element's entire content box, if aspect ratio doesn't match then the image will be clipped to fit.
+        
+        <h2>object-fit: scale-down</h2>
+        <div class="cont-ofp">
+            <img src="./content/b8.webp" id="ofp4"/>
+        </div>
+        Gray box is still 200x200, scale-down sizes content as if none or contain were specified whichever is smaller is chosen.
+        <pre>
+            <code class="language-css">
+                #img{
+                    width: 200px;
+                    height: 200px;
+                    object-fit: fill | cover | contain | scale-down | none (doesn't resize);
+                }
+            </code>
+        </pre>
+
+
+        <h2>object-position</h2>
+        <div class="cont-ofp">
+            <img src="./content/b8.webp" id="ofp5"/>
+        </div>
+        This image is set to object position: 50% 50% within its container.
+        <pre>
+            <code class="language-css">
+                #ofp5{
+                    width: 200px;
+                    height: 200px;
+                    object-fit: contain;
+                    object-position: 50% 50%;   /* horizontal offset | vertical offset */
+                }
+            </code>
+        </pre>
+        The object-position values can also be px values or left/right top/bottom values.
+    </p>
+</body>
+</html>

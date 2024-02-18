@@ -1,0 +1,37 @@
+body {
+    display: fkex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 50;
+}
+
+#face {
+    display: inline-block;
+    font-size: 30px;
+}
+
+/* To toggle li as completed */
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* health bar */
+#health-bar {
+    width: 300px;
+    height: 30px;
+    background-color: #e0e0e0;
+    border: 1px solid #333;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#health-value {
+    height: 100%;
+    background-color: #00ff08;
+    width: 100%; /* Initial health value is 100% */
+    transition: width 0.3s ease;
+}

@@ -1,0 +1,31 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Weakly Typed Forms</title>
+</head>
+<body>
+
+@* Using direct to create a form and is associated with the Post method when it is submitted *@
+@* 1st arg action, 2nd controller, 3rd method type *@
+@using(Html.BeginForm("LoginPost", "WeaklyTypedForms", FormMethod.Post))
+{   
+    @* Note that these are weakly typed *@
+    <div>
+        Enter Username: @Html.TextBox("Username")
+    </div>
+    <div>
+        @* Make text hidden *@
+        Enter Password: @Html.Password("Password")
+    </div>
+    <div>
+        <input type="submit" value="Click Me" />
+    </div>
+}
+</body>
+</html>

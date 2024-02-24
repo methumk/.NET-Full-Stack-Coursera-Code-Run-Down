@@ -1,0 +1,42 @@
+@* This view doesn't use the default _Layout and instead creates a new page from scratch *@
+@{
+    Layout = null;
+}
+
+@* 
+Examples:
+    - TempData
+    - TempData.Keep("key") to persist a key
+ *@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Temp Data Example</title>
+</head>
+<body>
+    <h1>Temp Data Example</h1>
+    <table>
+    <thead>
+        <tr>
+            <th>Customer Id</th>
+            <th>Customer Name</th>
+            <th>Customer Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in TempData["CustomerList"] as List<Customer>)
+    {
+        <tr>
+            <th>@item.Id</th>
+            <th>@item.Name</th>
+            <th>@item.Amount</th>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<a asp-controller="Customer" asp-action="CheckTempData">Check to see persistence</a>
+</body>
+</html>

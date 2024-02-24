@@ -1,0 +1,22 @@
+
+@* You need to specify the model you are using *@
+@model CoreWebApp.Models.LoginViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Model Binding</title>
+</head>
+<body>
+<h2>User Details</h2>
+@* We can specify the data from the model itself that was passed in *@
+<p>Username: @Model.User</p>
+<p>Password: @Model.Pass</p>
+</body>
+</html>

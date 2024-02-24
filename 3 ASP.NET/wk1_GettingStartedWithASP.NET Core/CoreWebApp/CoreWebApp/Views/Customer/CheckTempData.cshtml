@@ -1,0 +1,20 @@
+@* This view doesn't use the default _Layout and instead creates a new page from scratch *@
+@{
+    Layout = null;
+}
+
+@* This shows what was stored in temp data *@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Temp Data Example</title>
+</head>
+<body>
+    @* NOTE that Message persisted because we didn't use it prior, but also that Customer List persisted cuz we defined keep in TempData *@
+<p>The Message stored in from the temp data is: <b>@TempData["Message"]</b></p>
+<p>With Count: <b>@TempData["CustomerCount"]</b></p>
+</body>
+</html>

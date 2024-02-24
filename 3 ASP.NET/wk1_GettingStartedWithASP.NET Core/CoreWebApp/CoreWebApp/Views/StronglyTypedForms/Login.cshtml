@@ -1,0 +1,34 @@
+
+@* You need to specify the model you are using *@
+@model CoreWebApp.Models.LoginViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Strongly Typed Forms</title>
+</head>
+<body>
+
+@* Using direct to create a form and is associated with the Post method when it is submitted *@
+@* 1st arg action, 2nd controller, 3rd method type *@
+@using(Html.BeginForm("LoginPost", "StronglyTypedForms", FormMethod.Post))
+{   
+    <div>
+        @* BoxFor represents for the model specified *@
+        Username: @Html.TextBoxFor(m => m.User)
+    </div>
+    <div>
+        Password: @Html.TextBoxFor(m => m.Pass)
+    </div>
+    <div>
+        <input type="submit" value="Click Me"/>
+    </div>
+}
+</body>
+</html>

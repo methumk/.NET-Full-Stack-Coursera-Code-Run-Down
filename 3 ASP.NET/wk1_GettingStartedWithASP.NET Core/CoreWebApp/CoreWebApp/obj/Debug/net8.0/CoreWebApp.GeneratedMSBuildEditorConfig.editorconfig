@@ -1,0 +1,123 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CoreWebApp
+build_property.RootNamespace = CoreWebApp
+build_property.ProjectDir = C:\Users\rufus\Desktop\Projects\Courses\DotNetFullStack\3 ASP.NET\wk1_GettingStartedWithASP.NET Core\CoreWebApp\CoreWebApp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\rufus\Desktop\Projects\Courses\DotNetFullStack\3 ASP.NET\wk1_GettingStartedWithASP.NET Core\CoreWebApp\CoreWebApp
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/rufus/Desktop/Projects/Courses/DotNetFullStack/3 ASP.NET/wk1_GettingStartedWithASP.NET Core/CoreWebApp/CoreWebApp/Views/Customer/CheckTempData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQ2hlY2tUZW1wRGF0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rufus/Desktop/Projects/Courses/DotNetFullStack/3 ASP.NET/wk1_GettingStartedWithASP.NET Core/CoreWebApp/CoreWebApp/Views/Customer/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rufus/Desktop/Projects/Courses/DotNetFullStack/3 ASP.NET/wk1_GettingStartedWithASP.NET Core/CoreWebApp/CoreWebApp/Views/Customer/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rufus/Desktop/Projects/Courses/DotNetFullStack/3 ASP.NET/wk1_GettingStartedWithASP.NET Core/CoreWebApp/CoreWebApp/Views/Customer/NoLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcTm9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rufus/Desktop/Projects/Courses/DotNetFullStack/3 ASP.NET/wk1_GettingStartedWithASP.NET Core/CoreWebApp/CoreWebApp/Views/Customer/QueryEx.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcUXVlcnlFeC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rufus/Desktop/Projects/Courses/DotNetFullStack/3 ASP.NET/wk1_GettingStartedWithASP.NET Core/CoreWebApp/CoreWebApp/Views/Customer/SessionCheckEx.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcU2Vzc2lvbkNoZWNrRXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rufus/Desktop/Projects/Courses/DotNetFullStack/3 ASP.NET/wk1_GettingStartedWithASP.NET Core/CoreWebApp/CoreWebApp/Views/Customer/TempDataEx.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcVGVtcERhdGFFeC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rufus/Desktop/Projects/Courses/DotNetFullStack/3 ASP.NET/wk1_GettingStartedWithASP.NET Core/CoreWebApp/CoreWebApp/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rufus/Desktop/Projects/Courses/DotNetFullStack/3 ASP.NET/wk1_GettingStartedWithASP.NET Core/CoreWebApp/CoreWebApp/Views/Home/Message.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNZXNzYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rufus/Desktop/Projects/Courses/DotNetFullStack/3 ASP.NET/wk1_GettingStartedWithASP.NET Core/CoreWebApp/CoreWebApp/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rufus/Desktop/Projects/Courses/DotNetFullStack/3 ASP.NET/wk1_GettingStartedWithASP.NET Core/CoreWebApp/CoreWebApp/Views/Home/TempMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUZW1wTWVzc2FnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rufus/Desktop/Projects/Courses/DotNetFullStack/3 ASP.NET/wk1_GettingStartedWithASP.NET Core/CoreWebApp/CoreWebApp/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rufus/Desktop/Projects/Courses/DotNetFullStack/3 ASP.NET/wk1_GettingStartedWithASP.NET Core/CoreWebApp/CoreWebApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rufus/Desktop/Projects/Courses/DotNetFullStack/3 ASP.NET/wk1_GettingStartedWithASP.NET Core/CoreWebApp/CoreWebApp/Views/StronglyTypedForms/GetAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3Ryb25nbHlUeXBlZEZvcm1zXEdldEFjY291bnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rufus/Desktop/Projects/Courses/DotNetFullStack/3 ASP.NET/wk1_GettingStartedWithASP.NET Core/CoreWebApp/CoreWebApp/Views/StronglyTypedForms/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3Ryb25nbHlUeXBlZEZvcm1zXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rufus/Desktop/Projects/Courses/DotNetFullStack/3 ASP.NET/wk1_GettingStartedWithASP.NET Core/CoreWebApp/CoreWebApp/Views/StronglyTypedForms/LoginPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3Ryb25nbHlUeXBlZEZvcm1zXExvZ2luUG9zdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rufus/Desktop/Projects/Courses/DotNetFullStack/3 ASP.NET/wk1_GettingStartedWithASP.NET Core/CoreWebApp/CoreWebApp/Views/StronglyTypedForms/Success.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3Ryb25nbHlUeXBlZEZvcm1zXFN1Y2Nlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rufus/Desktop/Projects/Courses/DotNetFullStack/3 ASP.NET/wk1_GettingStartedWithASP.NET Core/CoreWebApp/CoreWebApp/Views/StronglyTypedForms/UserDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3Ryb25nbHlUeXBlZEZvcm1zXFVzZXJEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rufus/Desktop/Projects/Courses/DotNetFullStack/3 ASP.NET/wk1_GettingStartedWithASP.NET Core/CoreWebApp/CoreWebApp/Views/StronglyTypedForms/UserDetailList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3Ryb25nbHlUeXBlZEZvcm1zXFVzZXJEZXRhaWxMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rufus/Desktop/Projects/Courses/DotNetFullStack/3 ASP.NET/wk1_GettingStartedWithASP.NET Core/CoreWebApp/CoreWebApp/Views/WeaklyTypedForms/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2Vha2x5VHlwZWRGb3Jtc1xMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rufus/Desktop/Projects/Courses/DotNetFullStack/3 ASP.NET/wk1_GettingStartedWithASP.NET Core/CoreWebApp/CoreWebApp/Views/WeaklyTypedForms/LoginPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2Vha2x5VHlwZWRGb3Jtc1xMb2dpblBvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rufus/Desktop/Projects/Courses/DotNetFullStack/3 ASP.NET/wk1_GettingStartedWithASP.NET Core/CoreWebApp/CoreWebApp/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rufus/Desktop/Projects/Courses/DotNetFullStack/3 ASP.NET/wk1_GettingStartedWithASP.NET Core/CoreWebApp/CoreWebApp/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rufus/Desktop/Projects/Courses/DotNetFullStack/3 ASP.NET/wk1_GettingStartedWithASP.NET Core/CoreWebApp/CoreWebApp/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-jos5294aeo

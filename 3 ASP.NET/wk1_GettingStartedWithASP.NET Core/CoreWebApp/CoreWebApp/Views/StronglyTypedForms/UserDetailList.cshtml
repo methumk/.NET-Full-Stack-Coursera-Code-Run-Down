@@ -1,0 +1,26 @@
+
+@* We are specifying that the model we are getting is a list of type LoginViewModel*@
+@model IList<CoreWebApp.Models.LoginViewModel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Model Binding</title>
+</head>
+<body>
+<h2>User Details</h2>
+@* We can loop through the list saved in the model *@
+<ul>
+@foreach(var item in Model)
+{
+    <li>@item.User - @item.Pass</li>
+}
+</ul>
+</body>
+</html>

@@ -1,0 +1,75 @@
+@{
+    ViewData["Title"] = "This is a keyword for the page title"; // Title data is used in the layout so we use it here
+}
+@* NOTE: even though we don't specify the layout it still uses it without having to explicitly call it*@
+
+@* 
+Examples:
+    - ViewData/ViewBag
+    - @foreach method
+    - htmlhelpers
+        - Anchor tag with @Html.ActionLink()
+    - Tag helper
+        - Creating another anchor tag but this time with tag helpers
+
+ *@
+
+@* Getting data from controller using @ and the viewBag *@
+@* NOTE: how ViewBag was changed to value set in ViewData from controller *@
+<h3>@ViewBag.Message</h3>
+
+@* Get the customers saved in viewbag *@
+<p>There are @ViewBag.CustomerCount customers added into the list.</p>
+
+@* This just shows the object type but not the contents *@
+<p>
+    Content type: @ViewBag.CustomerList
+</p>
+
+@* Using foreach keyword to list through the items *@
+@* With objects we can use C# like syntax to loop through items in the object and retrieve them and add HTML elements*@
+<h4>View Bag Data:</h4>
+<ul>
+    @foreach(var item in ViewBag.CustomerList)
+    {
+        <li>@item.Id - @item.Name - @item.Amount</li>
+    }
+</ul>
+
+
+@* Can access the same data using viewData *@
+@* NOTE: complex data need to be type converted *@
+<h4>View Data inside a table:</h4>
+<table>
+    <thead>
+        <tr>
+            <th>Customer Id</th>
+            <th>Customer Name</th>
+            <th>Customer Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in ViewData["CustomerList"] as List<Customer>)
+    {
+        <tr>
+            <th>@item.Id</th>
+            <th>@item.Name</th>
+            <th>@item.Amount</th>
+        </tr>
+    }
+    </tbody>
+</table>
+
+
+@* Creates an action link using HTML helper
+    - First arg is the anchor tag name
+    - Second arg is the name of the action method
+    - THird arg is the name of the controller
+ *@
+@Html.ActionLink("Details Page", "Details", "Customer")
+
+@* Tag helpers 
+    - Specifying controlelr and action
+    - You can also pass params with asp-data as well
+*@
+<a asp-controller="Customer" asp-action="NoLayout">| No Layout</a>

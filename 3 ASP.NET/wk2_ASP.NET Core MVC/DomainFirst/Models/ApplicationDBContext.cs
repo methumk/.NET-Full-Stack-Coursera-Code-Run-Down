@@ -23,7 +23,7 @@ Examples: ORM
             // Database is your database name you want to create/add to?
             // Server name can be . to access your local DB server or you can get the name from the SQL Server management studio
             optionsBuilder.UseSqlServer("Server=DESKTOP-AJ3RPD9;Database=MyDB;Integrated Security=true;TrustServerCertificate=true;");
-            base.OnConfiguring(optionsBuilder);
+            // base.OnConfiguring(optionsBuilder);
         }
 
     }

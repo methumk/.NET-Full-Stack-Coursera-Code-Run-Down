@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rufus\\Desktop\\Projects\\Courses\\DotNetFullStack\\3 ASP.NET\\wk2_ASP.NET Core MVC\\ORMApp\\DomainFirst.csproj": {}
+    "C:\\Users\\rufus\\Desktop\\Projects\\Courses\\DotNetFullStack\\3 ASP.NET\\wk2_ASP.NET Core MVC\\DomainFirst\\DomainFirst.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rufus\\Desktop\\Projects\\Courses\\DotNetFullStack\\3 ASP.NET\\wk2_ASP.NET Core MVC\\ORMApp\\DomainFirst.csproj": {
+    "C:\\Users\\rufus\\Desktop\\Projects\\Courses\\DotNetFullStack\\3 ASP.NET\\wk2_ASP.NET Core MVC\\DomainFirst\\DomainFirst.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rufus\\Desktop\\Projects\\Courses\\DotNetFullStack\\3 ASP.NET\\wk2_ASP.NET Core MVC\\ORMApp\\DomainFirst.csproj",
+        "projectUniqueName": "C:\\Users\\rufus\\Desktop\\Projects\\Courses\\DotNetFullStack\\3 ASP.NET\\wk2_ASP.NET Core MVC\\DomainFirst\\DomainFirst.csproj",
         "projectName": "DomainFirst",
-        "projectPath": "C:\\Users\\rufus\\Desktop\\Projects\\Courses\\DotNetFullStack\\3 ASP.NET\\wk2_ASP.NET Core MVC\\ORMApp\\DomainFirst.csproj",
+        "projectPath": "C:\\Users\\rufus\\Desktop\\Projects\\Courses\\DotNetFullStack\\3 ASP.NET\\wk2_ASP.NET Core MVC\\DomainFirst\\DomainFirst.csproj",
         "packagesPath": "C:\\Users\\rufus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rufus\\Desktop\\Projects\\Courses\\DotNetFullStack\\3 ASP.NET\\wk2_ASP.NET Core MVC\\ORMApp\\obj\\",
+        "outputPath": "C:\\Users\\rufus\\Desktop\\Projects\\Courses\\DotNetFullStack\\3 ASP.NET\\wk2_ASP.NET Core MVC\\DomainFirst\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rufus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.2, )"
@@ -63,6 +67,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.2, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.1, )"
             }
           },
           "imports": [

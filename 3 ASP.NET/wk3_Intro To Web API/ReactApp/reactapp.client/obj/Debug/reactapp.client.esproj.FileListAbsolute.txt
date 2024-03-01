@@ -1,0 +1,1 @@
+C:\Users\rufus\Desktop\Projects\Courses\DotNetFullStack\3 ASP.NET\wk3_Intro To Web API\ReactApp\reactapp.client\obj\Debug\reactapp.client.esproj.CoreCompileInputs.cache

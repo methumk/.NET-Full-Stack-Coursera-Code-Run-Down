@@ -1,0 +1,59 @@
+@model IEnumerable<FormAndVal.Models.WorkoutInfoGroupedByDate>
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@{
+    ViewData["Title"] = "Today's Workout";
+    string userName = User.Identity?.Name;
+    string capitalizedUserName = "";
+    if (userName != null)
+    {
+        int atIndex = userName.IndexOf('@');
+        string trimmedName = atIndex >= 0 ? userName.Substring(0, atIndex) : userName;
+        capitalizedUserName = char.ToUpper(trimmedName[0]) + trimmedName.Substring(1);
+    }
+}
+
+<div class="text-center">
+<h1 class="display-4">Welcome @capitalizedUserName!</h1>
+    @if (@Model?.Count() == 0)
+    {
+        <p>You have no workout data for today</p>
+        <p>Click <a asp-action="Create">here</a> to add workout</p>
+    }
+    else
+    {
+        <p>Workouts for @ViewData["TodayDate"]</p>
+        @foreach(var workoutForDate in Model)
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Exercise</th>
+                        <th>Weight (lb)</th>
+                        <th>Sets</th>
+                        <th>Reps</th>
+                        <th>Rest (min)</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var workoutInfo in workoutForDate.WorkoutInfoForDate)
+                    {
+                        <tr>
+                            <td><a asp-action="Edit" asp-route-id="@workoutInfo.Id">@workoutInfo.Exercise</a></td>
+                            <td>@workoutInfo.Weight</td>
+                            <td>@workoutInfo.Sets</td>
+                            <td>@workoutInfo.Reps</td>
+                            <td>@workoutInfo.Rest</td>
+                            <td><a asp-action="Delete" asp-route-id="@workoutInfo.Id">Delete</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    }
+</div> 
+
+

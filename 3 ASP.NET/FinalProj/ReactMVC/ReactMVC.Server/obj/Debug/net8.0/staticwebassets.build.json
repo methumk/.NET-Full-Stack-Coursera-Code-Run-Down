@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "6bM7RnPR2gTWmKMeNs0mmeahIu+1N7M4kGKCvMWf66M=",
+  "Source": "ReactMVC.Server",
+  "BasePath": "_content/ReactMVC.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\rufus\\Desktop\\Projects\\Courses\\DotNetFullStack\\3 ASP.NET\\FinalProj\\ReactMVC\\reactmvc.client\\reactmvc.client.esproj",
+      "Version": 2,
+      "Source": "reactmvc.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

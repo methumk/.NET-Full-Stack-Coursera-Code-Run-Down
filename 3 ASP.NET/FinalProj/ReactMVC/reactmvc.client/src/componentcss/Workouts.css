@@ -1,0 +1,27 @@
+.workout-display-header {
+    text-align: center;
+}
+
+.workout-data-panel {
+    text-align: center;
+}
+
+.workout-data-table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.workout-row-data {
+    text-align: center;
+}
+
+
+.table-del-btn:hover {
+    border-color: #ff0400;
+}
+  
+.table-edit-btn:hover {
+    border-color: #04ff00;
+}

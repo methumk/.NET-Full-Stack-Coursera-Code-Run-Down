@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:5173",
+"RedirectUrl": "",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "C:\\Users\\rufus\\Desktop\\Projects\\Courses\\DotNetFullStack\\3 ASP.NET\\FinalProj\\ReactMVC\\ReactMVC.Server\\..\\reactmvc.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}
